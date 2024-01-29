@@ -1,2 +1,2 @@
-# mslearn-knowledge-mining.de-de
-German repo
+# mslearn-knowledge-mining
+Labdateien für Azure KI Knowledge Mining-Module
