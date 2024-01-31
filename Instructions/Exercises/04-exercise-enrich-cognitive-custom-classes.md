@@ -1,9 +1,9 @@
 ---
 lab:
-  title: Anreichern eines KI-Suche-Indexes mit benutzerdefinierten Klassen
+  title: Anreichern eines KI-Suchindexes mit benutzerdefinierten Klassen
 ---
 
-# Anreichern eines KI-Suche-Indexes mit benutzerdefinierten Klassen
+# Anreichern eines KI-Suchindexes mit benutzerdefinierten Klassen
 
 Sie haben eine Suchlösung erstellt und möchten Ihren Indizes nun Azure KI Services für Sprachanreicherungen hinzufügen.
 
@@ -74,7 +74,7 @@ In dieser Übung werden 210 Textdateien verwendet, die eine Zusammenfassung der
     ![Screenshot: Position zum Herunterladen der ZIP-Datei mit den Beispieldaten](../media/04-media/download-sample-data.png)
 1. Öffnen Sie die Datei **Custom multi classification – movies summary.zip**, und extrahieren Sie den Ordner, der alle Dateien enthält.
 
-    > **Hinweis**:Mit diesen Dateien können Sie ein Modell in Language Studio trainieren und alle Dateien in Azure Cognitive Search indizieren.
+    > **Hinweis**: Mit diesen Dateien können Sie ein Modell in Language Studio trainieren und alle Dateien in Azure Cognitive Search indizieren.
 
 1. Wählen Sie im [Azure-Portal](https://portal.azure.com/) die Option **Ressourcengruppen** und dann Ihre Ressourcengruppe aus.
 1. Wählen Sie das von Ihnen erstellte Speicherkonto aus, z. B. **acs18245str**.
@@ -97,7 +97,7 @@ In dieser Übung werden 210 Textdateien verwendet, die eine Zusammenfassung der
 1. Klicken Sie im Breadcrumb-Link oben auf der Seite auf **Startseite**.
 1. Wählen Sie die Option **Erstellen** unter **Sprachdienst** aus.
 1. Klicken Sie auf **Erstellen**.
-1. Wählen Sie die Option aus, die **Benutzerdefinierte Textklassifizierung und Erkennung benutzerdefinierter benannter Entitäten** enthält.
+1. Wählen Sie die Option aus, die **benutzerdefinierte Textklassifizierung und benutzerdefinierte benannte Entitätserkennung** enthält.
 
     ![Screenshot: Hinzufügen des Features für die benutzerdefinierte Textklassifizierung](../media/04-media/select-additional-features.png)
 1. Klicken Sie auf **Continue to create your resource** (Mit Erstellung Ihrer Ressource fortfahren).
@@ -105,10 +105,10 @@ In dieser Übung werden 210 Textdateien verwendet, die eine Zusammenfassung der
     ![Screenshot: Anzeigen der benötigten Informationen zum Erstellen eines Sprachdiensts](../media/04-media/enter-language-service-information.png)
 1. Wählen Sie unter **Ressourcengruppe** die Option **cog-search-language-exe** aus.
 1. Wählen Sie unter **Region** die zuvor verwendete Region aus.
-1. Geben Sie unter **Name****learn-language-service-for-custom-text** ein. Dies muss global eindeutig sein, daher müssen Sie möglicherweise am Ende eine zufällige Zahl- oder Zeichenfolge hinzufügen.
+1. Geben Sie unter **Name****learn-language-service-for-custom-text** ein. Dies muss global eindeutig sein, daher müssen Sie möglicherweise am Ende eine zufällige Zahlen- oder Zeichenfolge hinzufügen.
 1. Wählen Sie **S** als **Tarif** aus.
 1. Wählen Sie unter **Neues/Vorhandenes Speicherkonto** die Option **Vorhandenes Speicherkonto** aus.
-1. Wählen Sie unter **Speicherkonto im aktuell ausgewählten Abonnement und in der aktuell ausgewählten Ressourcenregion** das erstellte Speicherkonto aus (z. B. **acs18245str**).
+1. Wählen Sie unter **Speicherkonto im aktuell ausgewählten Abonnement und in der aktuell ausgewählten Ressourcenregion** das erstellte Speicherkonto aus (z. B. **acs18245str**).
 1. Stimmen Sie zu, dass Sie die **Hinweise zu verantwortungsvoller KI** gelesen haben, und klicken Sie dann auf **Überprüfen und erstellen**.
 1. Klicken Sie auf **Erstellen**.
 1. Warten Sie, bis die Ressourcen bereitgestellt wurden, und klicken Sie dann auf **Zu Ressourcengruppe wechseln**.
@@ -199,7 +199,7 @@ Erstellen Sie einen Suchindex, den Sie mit diesem Modell erweitern können. Sie 
 1. Geben Sie unter **Datenquellenname****movie-summaries** ein.
 1. Klicken Sie auf **Vorhandene Verbindung auswählen**, wählen Sie dann Ihr Speicherkonto und anschließend den soeben erstellten Container **search-data** aus.
 1. Wählen Sie **Kognitive Skills hinzufügen (optional)** aus.
-1. Erweitern Sie den Abschnitt **KI Services anfügen **, und wählen Sie dann den Azure KI-Dienst unter „Free“ aus.
+1. Erweitern Sie den Abschnitt **KI Services anfügen**, und wählen Sie dann den Azure KI-Dienst unter „Free“ aus.
 
     ![Screenshot: Anfügen einer Azure KI Services-Instanz](../media/04-media/attach-cognitive-services.png)
 1. Erweitern Sie den Abschnitt **Anreicherungen hinzufügen**.
