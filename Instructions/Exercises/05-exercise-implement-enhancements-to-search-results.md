@@ -167,8 +167,7 @@ Dieses Hotel verfügt über die entsprechenden Begriffe „See“ im Feld `Hotel
 
 ### Testen des aktualisierten Index
 
-1. Wählen Sie oben auf der Seite den Link für den Suchdienst **advanced-search-service-12345 | Indexes** aus.
-1. Wählen Sie im Bereich **Übersicht** die Option **Indizes** und dann **hotels-sample-index** aus.
+1. Kehren Sie zur Registerkarte **Such-Explorer** der Seite **hotels-sample-index** zurück.
 1. Geben Sie in der **Abfragezeichenfolge** die gleiche Suche wie zuvor ein:
 
     `lake + view&$select=HotelName,Description,Category,Tags&$count=true`

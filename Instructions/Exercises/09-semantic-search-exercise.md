@@ -1,26 +1,26 @@
 ---
 lab:
-  title: Einrichten der semantischen Suche
+  title: Einrichten von Semantischer Sortierer
 ---
 
-# Einrichten der semantischen Suche
+# Einrichten von Semantischer Sortierer
 
-> **Hinweis**: Um dieses Lab abzuschließen, benötigen Sie ein [Azure-Abonnement](https://azure.microsoft.com/free?azure-portal=true), in dem Sie über Administratorzugriff verfügen. Diese Übung erfordert auch den Azure KI-Suche-Dienst mit einer verrechenbaren Ebene.
+> **Hinweis**: Um dieses Lab abzuschließen, benötigen Sie ein [Azure-Abonnement](https://azure.microsoft.com/free?azure-portal=true), in dem Sie über Administratorzugriff verfügen. Für diese Übung wird der Dienst **Azure KI-Suche** mit einem abrechnungsfähigen Tarif benötigt.
 
-In dieser Übung werden Sie einem Index die semantische Suche hinzufügen und die semantische Suche für eine Abfrage verwenden.
+In dieser Übung werden Sie Semantischer Sortierer einem Index hinzufügen und für eine Abfrage verwenden.
 
-## Aktivieren der semantischen Suche
+## Aktivieren von Semantischer Sortierer
 
 1. Öffnen Sie das Azure-Portal, und melden Sie sich an.
 1. Wählen Sie **Alle Ressourcen** und dann Ihren Suchdienst aus.
-1. Wählen Sie im Navigationsbereich **Semantische S (Vorschau)** aus.
+1. Wählen Sie im Navigationsbereich **Semantischer Sortierer (Vorschau)** aus.
 1. Wählen Sie unter **Verfügbarkeit** in der Option **Free** die Option **Plan auswählen**aus.
 
-![Screenshot des Dialogfelds für die semantische Suche.](../media/semantic-search/semanticsearch.png)
+![Screenshot des Dialogfelds „Semantischer Sortierer“](../media/semantic-search/semanticsearch.png)
 
 ## Importieren eines Beispielindexes
 
-1. Wählen Sie auf der Startseite des Azure-Portals **Alle Ressourcen** und dann Ihren Suchdienst aus.
+1. Kehren Sie zur Seite **Übersicht** Ihres Suchdiensts zurück.
 1. Klicken Sie auf **Daten importieren**.
 
     ![Screenshot der Schaltfläche „Daten importieren“.](../media/semantic-search/importdata.png)
@@ -33,11 +33,10 @@ In dieser Übung werden Sie einem Index die semantische Suche hinzufügen und di
 
 ## Konfigurieren der semantischen Rangfolge
 
-Nachdem Sie einen Suchindex und eine semantische Suche aktiviert haben, können Sie die semantische Rangfolge konfigurieren. Sie benötigen einen Suchclient, der Vorschau-APIs für die Abfrageanforderung unterstützt. Sie können den Such-Explorer im Azure-Portal, in der Postman-App, im Azure-SDK für .NET oder im Azure-SDK für Python verwenden. In dieser Übung werden Sie den Such-Explorer im Azure-Portal verwenden.
+Nachdem Sie einen Suchindex und Semantischer Sortierer aktiviert haben, können Sie die semantische Sortierung konfigurieren. Sie benötigen einen Suchclient, der Vorschau-APIs für die Abfrageanforderung unterstützt. Sie können den Such-Explorer im Azure-Portal, in der Postman-App, im Azure-SDK für .NET oder im Azure-SDK für Python verwenden. In dieser Übung werden Sie den Such-Explorer im Azure-Portal verwenden.
 
 Führen Sie die folgenden Schritte aus, um die semantische Rangfolge zu konfigurieren:
 
-1. Wählen Sie auf der Startseite des Azure-Portals **Alle Ressourcen** und dann Ihren Suchdienst aus.
 1. Wählen Sie auf der Navigationsleiste in **Suchverwaltung** die Option **Indizes** aus.
 
     ![Screenshot der Schaltfläche „Indizes“.](../media/semantic-search/indexes.png)
@@ -53,26 +52,20 @@ Führen Sie die folgenden Schritte aus, um die semantische Rangfolge zu konfigur
 1. Wählen Sie unter **Schlüsselwortfelder** im **Feld „Name“** die Option **Tags** aus.
 1. Wählen Sie **Speichern**.
 1. Wählen Sie auf der Indexseite **Speichern** aus.
-1. Wählen Sie auf der Startseite des Azure-Portals **Alle Ressourcen** und dann Ihren Suchdienst aus.
-1. Wählen Sie auf der Navigationsleiste in **Suchverwaltung** die Option **Indizes** aus.
-
-    ![Screenshot der Schaltfläche „Indizes“.](../media/semantic-search/indexes.png)
-
-1. Wählen Sie Ihren Index aus.
 1. Wählen Sie **Suchexplorer** aus.
 1. Wählen Sie **Ansicht** und dann **JSON-Ansicht** aus.
 1. Geben Sie im JSON-Abfrageeditor den folgenden Text ein:
 
     ```json
         {
-            "queryType": "semantic",
-            "queryLanguage" : "en-us",
-            "search": "all hotels near the water" , 
-            "semanticConfiguration": "hotels-conf" , 
-            "searchFields": "",
-            "speller": "lexicon" , 
-            "answers": "extractive|count-3",
-            "count": true
+         "queryType": "semantic",
+         "queryLanguage" : "en-us",
+         "search": "all hotels near the water" , 
+         "semanticConfiguration": "hotels-conf" , 
+         "searchFields": "",
+         "speller": "lexicon" , 
+         "answers": "extractive|count-3",
+         "count": true
         }
     ```
 
@@ -85,5 +78,5 @@ Wenn Sie den Azure KI-Suche-Dienst nicht mehr benötigen, sollten Sie die Ressou
 
 >**Hinweis** Durch das Löschen Ihres Azure KI-Suche-Diensts wird sichergestellt, dass Ihr Abonnement nicht mehr für Ressourcen belastet wird. Ihnen wird jedoch ein kleiner Betrag für die Datenspeicherung in Rechnung gestellt, solange der Speicher in Ihrem Abonnement vorhanden ist. Wenn Sie die Erkundung des Cognitive Search-Diensts abgeschlossen haben, können Sie den Cognitive Search-Dienst und die zugehörigen Ressourcen löschen. Wenn Sie jedoch andere Labs in dieser Reihe abschließen möchten, müssen Sie ihn neu erstellen.
 > So löschen Sie die Ressourcen:
-> 1. Öffnen Sie im [Azure-Portal](https://portal.azure.com?azure-portal=true) auf der Seite **Ressourcengruppen** die Ressourcengruppe, die Sie beim Erstellen Ihres Cognitive Search-Diensts angegeben haben.
+> 1. Öffnen Sie im [Azure-Portal](https://portal.azure.com?azure-portal=true ) auf der Seite **Ressourcengruppen** die Ressourcengruppe, die Sie beim Erstellen Ihres Cognitive Search-Diensts angegeben haben.
 > 1. Klicken Sie auf **Ressourcengruppe löschen**, geben Sie den Ressourcengruppennamen ein, um zu bestätigen, dass Sie ihn löschen möchten, und klicken Sie dann auf **Löschen**.
