@@ -157,7 +157,7 @@ Als Nächstes erstellen Sie eine benutzerdefinierte Umgebung, damit Sie auf eine
 1. Wählen Sie die Registerkarte **Benutzerdefinierte Umgebungen** aus.
 1. Wählen Sie **+ Erstellen** aus.
 1. Geben Sie für **Name** den Wert **my-custom-environment** ein.
-1. Wählen Sie in der Liste der kuratierten Umgebungen unter **Umgebungstyp auswählen** die Option **automl-gpu:2** aus.
+1. Wählen Sie in der Liste *Kuratierte Umgebungen* unter **Umgebungstyp auswählen** die neueste Version von **automl-gpu** aus.
 1. Wählen Sie **Weiter** aus.
 1. Öffnen Sie auf Ihrem lokalen Computer die `conda_env.yaml`-Datei, die Sie zuvor heruntergeladen haben, und kopieren Sie ihren Inhalt.
 1. Kehren Sie zum Browser zurück, und wählen Sie im Bereich „Anpassen“ den Wert **conda_dependencies.yaml** aus.
@@ -175,7 +175,7 @@ Ihr Rückschlusscluster sollte jetzt einsatzbereit sein. Sie haben auch den Bewe
 1. Wählen Sie **Bereitstellen** und dann **Echtzeitendpunkt** aus.
 
     ![Ein Screenshot des Bereichs „Endpunkt auswählen“.](../media/06-media/04-select-endpoint.png)
-1. Geben Sie für **Name** den Wert **car-evaluation-endpoint** ein.
+1. Geben Sie für **Name** einen eindeutigen Namen ein, z. B. **car-evaluation-endpoint-1440637584**.
 1. Wählen Sie für **Computetyp** die Option **Verwaltet** aus.
 1. Wählen Sie für **Authentifizierungstyp** die **schlüsselbasierte Authentifizierung** aus.
 1. Wählen Sie **Weiter** und dann **Weiter** aus.
@@ -231,7 +231,7 @@ Warten Sie, bis das Modell bereitgestellt ist; das kann bis zu 10 Minuten dauer
 
     ```json
     {
-        "predicted_price": 5790.948226933133
+        "predicted_price": 5852.823214312815
     }
     ```
 
@@ -300,15 +300,15 @@ Als nächstes erstellen Sie einen neuen Cognitive Search-Dienst und reichern ein
 ### Erstellen einer Azure KI-Suche-Ressource
 
 1. Wählen Sie im Azure-Portal auf der Homepage **+ Ressource erstellen** aus.
-1. Suchen Sie nach **Suche**, und wählen Sie dann **Azure KI-Suche** aus.
+1. Suchen Sie nach **Azure KI-Suche**, und wählen Sie dann **Azure KI-Suche** aus.
 1. Klicken Sie auf **Erstellen**.
 1. Wählen Sie in **Ressourcengruppe** die Option **aml-for-acs-enrichment** aus.
-1. Geben Sie im Dienstnamen **acs-enriched** ein.
+1. Geben Sie unter „Dienstname“ einen eindeutigen Namen ein, z. B. **acs-enriched-1440637584**.
 1. Wählen Sie für **Ort** dieselbe Region aus, die Sie zuvor verwendet haben.
 1. Klicken Sie auf**Überprüfen + erstellen** und dann auf **Erstellen**.
 1. Warten Sie, bis die Ressourcen bereitgestellt wurden, und klicken Sie dann auf **Zu Ressource wechseln**.
 1. Klicken Sie auf **Daten importieren**.
-1. Wählen Sie im Bereich **Mit Ihren Daten verbinden** für das Feld **Datenquellenname** die Option **Azure Blob Storage** aus.
+1. Wählen Sie im Bereich **Mit Ihren Daten verbinden** für das Feld **Datenquelle** die Option **Azure Blob Storage** aus.
 1. Geben Sie unter **Datenquellenname** den Wert **import-docs** ein.
 1. Wählen Sie in **Analysemodus** die Option **JSON** aus.
 1. Wählen Sie in **Verbindungszeichenfolge** die Option **Vorhandene Verbindung auswählen** aus.

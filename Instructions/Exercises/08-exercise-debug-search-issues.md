@@ -71,9 +71,11 @@ Der Indexer beginnt nun damit, 50 Dokumente zu erfassen. Wenn Sie jedoch den St
 
 1. Legen Sie die **Anonyme Zugriffsebene** auf **Container(anonymer Lesezugriff für Container und Blobs)** fest.
 
+    > **Hinweis:** Möglicherweise müssen Sie anonymen Blobzugriff aktivieren, um diese Option auszuwählen. Wechseln Sie dazu im Speicherkonto zu **Konfiguration**, legen Sie **Anonymen Blobzugriff zulassen** auf **Aktiviert** fest, und wählen Sie dann **Speichern** aus.
+
 1. Klicken Sie auf **Erstellen**.
 1. Wählen Sie Ihren neuen Container in der Liste aus, und wählen Sie dann **Auswählen** aus.
-
+1. Wählen Sie **hotel-sample-indexer** als **Indexervorlage** aus.
 1. Wählen Sie **Sitzung speichern** aus.
 
     Das Abhängigkeitsdiagramm zeigt Ihnen, dass für jedes Dokument ein Fehler zu drei Skills vorhanden ist.
@@ -87,7 +89,7 @@ Der Indexer beginnt nun damit, 50 Dokumente zu erfassen. Wenn Sie jedoch den St
 
     *Ungültiger Sprachcode „(Unbekannt)“. Unterstützte Sprachen: ar,cs,da,de,en,es,fi,fr,hu,it,ja,ko,nl,no,pl,pt-BR,pt-PT,ru,sv,tr,zh-Hans. Weitere Informationen finden Sie unter https://aka.ms/language-service/language-support.*
 
-Wenn Sie sich nun wieder das Abhängigkeitsdiagramm ansehen, weist der Skill „Spracherkennung“ Ausgaben für die drei Skills mit Warnungen auf. Die Skilleingabe, die den Fehler verursacht, ist `languageCode`.
+    Wenn Sie sich nun wieder das Abhängigkeitsdiagramm ansehen, weist der Skill „Spracherkennung“ Ausgaben für die drei Skills mit Warnungen auf. Die Skilleingabe, die den Fehler verursacht, ist `languageCode`.
 
 1. Wählen Sie im Abhängigkeitsdiagramm **Spracherkennung** aus.
 

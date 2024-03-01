@@ -1,9 +1,9 @@
 ---
 lab:
-  title: Anreichern eines KI-Suchindexes mit benutzerdefinierten Klassen
+  title: Anreichern eines KI-Suche-Indexes mit benutzerdefinierten Klassen
 ---
 
-# Anreichern eines KI-Suchindexes mit benutzerdefinierten Klassen
+# Anreichern eines KI-Suche-Indexes mit benutzerdefinierten Klassen
 
 Sie haben eine Suchlösung erstellt und möchten Ihren Indizes nun Azure KI Services für Sprachanreicherungen hinzufügen.
 
@@ -31,7 +31,7 @@ Um Zeit zu sparen, wählen Sie diese Azure ARM-Vorlage aus, um Ressourcen zu ers
 
     ![Screenshot: Optionen, die beim Bereitstellen von Ressourcen in Azure angezeigt werden](../media/04-media/deploy-azure-resources.png)
 1. Klicken Sie unter **Ressourcengruppe** auf **Neu erstellen**, und nennen Sie die Ressourcengruppe **cog-search-language-exe**.
-1. Wählen Sie unter **Region** eine [unterstützte Region](/azure/ai-services/language-service/custom-text-classification/service-limits#regional-availability) aus, die sich in Ihrer Nähe befindet.
+1. Wählen Sie unter **Region** eine [unterstützte Region](https://learn.microsoft.com/azure/ai-services/language-service/concepts/regional-support) aus, die sich in Ihrer Nähe befindet.
 1. Das **Ressourcenpräfix** muss global eindeutig sein. Geben Sie ein Präfix aus zufälligen Nummern und Kleinbuchstaben ein (z. B. **acs18245**).
 1. Wählen Sie unter **Standort** dieselbe Region aus wie zuvor.
 1. Klicken Sie auf **Überprüfen + erstellen**.
@@ -74,16 +74,17 @@ In dieser Übung werden 210 Textdateien verwendet, die eine Zusammenfassung der
     ![Screenshot: Position zum Herunterladen der ZIP-Datei mit den Beispieldaten](../media/04-media/download-sample-data.png)
 1. Öffnen Sie die Datei **Custom multi classification – movies summary.zip**, und extrahieren Sie den Ordner, der alle Dateien enthält.
 
-    > **Hinweis**: Mit diesen Dateien können Sie ein Modell in Language Studio trainieren und alle Dateien in Azure Cognitive Search indizieren.
+    > **Hinweis**:Mit diesen Dateien können Sie ein Modell in Language Studio trainieren und alle Dateien in Azure Cognitive Search indizieren.
 
 1. Wählen Sie im [Azure-Portal](https://portal.azure.com/) die Option **Ressourcengruppen** und dann Ihre Ressourcengruppe aus.
 1. Wählen Sie das von Ihnen erstellte Speicherkonto aus, z. B. **acs18245str**.
+1. Wählen Sie **Konfiguration** im linken Bereich, dann die Option **Aktivieren** für die Einstellung *Anonymen Blob-Zugriff zulassen* und danach **Speichern** oben auf der Seite aus.
 
     ![Screenshot: Erstellen eines neuen Speichercontainers](../media/04-media/select-azure-blob-storage.png)
+
 1. Klicken Sie links auf **Container** und dann auf **+ Container**.
 1. Geben Sie im Bereich **Neuer Container** unter **Name****language-studio-training-data** ein.
-1. Wählen Sie unter **Anonyme Zugriffsebene** die Option **Container (Anonymer Lesezugriff für Container und Blobs)** aus.
-1. Klicken Sie auf **Erstellen**.
+1. Wählen Sie unter **Anonyme Zugriffsebene** die Option **Container (Anonymer Lesezugriff für Container und Blobs)** und dann **Erstellen** aus.
 1. Wählen Sie den neuen Container **language-studio-training-data** aus, den Sie soeben erstellt haben.
     ![Screenshot: Hochladen von Dateien in den Container](../media/04-media/upload-files.png)
 1. Klicken Sie oben im Bereich auf **Hochladen**.
@@ -95,9 +96,9 @@ In dieser Übung werden 210 Textdateien verwendet, die eine Zusammenfassung der
 ### Erstellen einer Sprachressource
 
 1. Klicken Sie im Breadcrumb-Link oben auf der Seite auf **Startseite**.
+1. Wählen Sie **+ Ressource erstellen** aus, und suchen Sie nach *Sprachdienst*.
 1. Wählen Sie die Option **Erstellen** unter **Sprachdienst** aus.
-1. Klicken Sie auf **Erstellen**.
-1. Wählen Sie die Option aus, die **benutzerdefinierte Textklassifizierung und benutzerdefinierte benannte Entitätserkennung** enthält.
+1. Wählen Sie die Option aus, die **Benutzerdefinierte Textklassifizierung und Erkennung benutzerdefinierter benannter Entitäten** enthält.
 
     ![Screenshot: Hinzufügen des Features für die benutzerdefinierte Textklassifizierung](../media/04-media/select-additional-features.png)
 1. Klicken Sie auf **Continue to create your resource** (Mit Erstellung Ihrer Ressource fortfahren).
@@ -105,10 +106,10 @@ In dieser Übung werden 210 Textdateien verwendet, die eine Zusammenfassung der
     ![Screenshot: Anzeigen der benötigten Informationen zum Erstellen eines Sprachdiensts](../media/04-media/enter-language-service-information.png)
 1. Wählen Sie unter **Ressourcengruppe** die Option **cog-search-language-exe** aus.
 1. Wählen Sie unter **Region** die zuvor verwendete Region aus.
-1. Geben Sie unter **Name****learn-language-service-for-custom-text** ein. Dies muss global eindeutig sein, daher müssen Sie möglicherweise am Ende eine zufällige Zahlen- oder Zeichenfolge hinzufügen.
+1. Geben Sie unter **Name****learn-language-service-for-custom-text** ein. Dies muss global eindeutig sein, daher müssen Sie möglicherweise am Ende eine zufällige Zahl- oder Zeichenfolge hinzufügen.
 1. Wählen Sie **S** als **Tarif** aus.
 1. Wählen Sie unter **Neues/Vorhandenes Speicherkonto** die Option **Vorhandenes Speicherkonto** aus.
-1. Wählen Sie unter **Speicherkonto im aktuell ausgewählten Abonnement und in der aktuell ausgewählten Ressourcenregion** das erstellte Speicherkonto aus (z. B. **acs18245str**).
+1. Wählen Sie unter **Speicherkonto im aktuell ausgewählten Abonnement und in der aktuell ausgewählten Ressourcenregion** das erstellte Speicherkonto aus (z. B. **acs18245str**).
 1. Stimmen Sie zu, dass Sie die **Hinweise zu verantwortungsvoller KI** gelesen haben, und klicken Sie dann auf **Überprüfen und erstellen**.
 1. Klicken Sie auf **Erstellen**.
 1. Warten Sie, bis die Ressourcen bereitgestellt wurden, und klicken Sie dann auf **Zu Ressourcengruppe wechseln**.
@@ -116,7 +117,7 @@ In dieser Übung werden 210 Textdateien verwendet, die eine Zusammenfassung der
 
     ![Screenshot: Position zum Starten von Language Studio](../media/04-media/started-language-studio.png)
 1. Scrollen Sie im Bereich **Übersicht** nach unten, und klicken Sie auf **Erste Schritte mit Language Studio**.
-1. Wenn Sie aufgefordert werden, eine Sprachressource auszuwählen, wählen Sie die Ressource aus, die Sie zuvor erstellt haben.
+1. Melden Sie sich beim Language Studio an. Wenn Sie aufgefordert werden, eine Sprachressource auszuwählen, wählen Sie die Ressource aus, die Sie zuvor erstellt haben.
 
 ### Erstellen eines benutzerdefinierten Textklassifizierungsprojekts in Language Studio
 
@@ -199,7 +200,7 @@ Erstellen Sie einen Suchindex, den Sie mit diesem Modell erweitern können. Sie 
 1. Geben Sie unter **Datenquellenname****movie-summaries** ein.
 1. Klicken Sie auf **Vorhandene Verbindung auswählen**, wählen Sie dann Ihr Speicherkonto und anschließend den soeben erstellten Container **search-data** aus.
 1. Wählen Sie **Kognitive Skills hinzufügen (optional)** aus.
-1. Erweitern Sie den Abschnitt **KI Services anfügen**, und wählen Sie dann den Azure KI-Dienst unter „Free“ aus.
+1. Erweitern Sie den Abschnitt **KI Services anfügen**, und wählen Sie dann Ihren zuvor erstellten Azure KI-Dienst aus.
 
     ![Screenshot: Anfügen einer Azure KI Services-Instanz](../media/04-media/attach-cognitive-services.png)
 1. Erweitern Sie den Abschnitt **Anreicherungen hinzufügen**.
@@ -221,7 +222,7 @@ Der Indexer wird ausgeführt und erstellt einen Index der 210 Textdateien. Sie 
 
 Nun erstellen Sie eine Python-Funktions-App, das Ihr benutzerdefiniertes Cognitive Search-Skillset aufruft. Die Funktions-App nutzt Ihr benutzerdefiniertes Textklassifizierungsmodell, um Ihren Suchindex zu erweitern.
 
-1. Klonen Sie im Terminal dieses GitHub-Repository auf Ihren Computer.
+1. Öffnen Sie VScode und klonen Sie im Terminal dieses GitHub-Repository auf Ihren Computer.
 
     ```bash
     git clone https://github.com/MicrosoftLearning/mslearn-doc-intelligence movie-genre-function
@@ -311,7 +312,7 @@ Die Funktions-App muss mit Ihrem benutzerdefinierten Textklassifizierungsmodell 
 
 Es gibt eine Beispielabfrage, mit der Sie testen können, ob Ihre Funktions-App und das Klassifizierungsmodell ordnungsgemäß funktionieren.
 
-1. Klicken Sie links auf **Explorer**, erweitern Sie den Ordner **customtectcla**, und wählen Sie **sample.dat** aus.
+1. Klicken Sie links auf **Explorer**, erweitern Sie den Ordner **customtextcla**, und wählen Sie **sample.dat** aus.
 
     ![Screenshot: JSON-Beispielabfrage](../media/04-media/copy-sample-query.png)
 1. Kopieren Sie den Inhalt der Datei.

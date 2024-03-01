@@ -66,9 +66,9 @@ Wenn Sie noch keine in Ihrem Abonnement haben, müssen Sie eine **Azure KI Servi
 
 ## Vorbereiten der Entwicklung einer App in Visual Studio Code
 
-Sie werden Ihre Such-App mit Visual Studio Code entwickeln. Die Codedateien für Ihre App wurden in einem GitHub-Repository bereitgestellt.
+Sie entwickeln Ihre Such-App mit Visual Studio Code. Die Codedateien für Ihre App wurden in einem GitHub-Repository bereitgestellt.
 
-> **Tipp**: Wenn Sie das Repository **mslearn-knowledge-mining** bereits geklont haben, öffnen Sie es in Visual Studio-Code. Führen Sie andernfalls die folgenden Schritte aus, um es in Ihrer Entwicklungsumgebung zu klonen.
+> **Tipp**: Wenn Sie das Repository **mslearn-knowledge-mining** bereits geklont haben, öffnen Sie es in Visual Studio Code. Führen Sie andernfalls die folgenden Schritte aus, um es in Ihrer Entwicklungsumgebung zu klonen.
 
 1. Starten Sie Visual Studio Code.
 1. Öffnen Sie die Palette (UMSCHALT+STRG+P), und führen Sie einen **Git: Clone**-Befehl aus, um das Repository `https://github.com/MicrosoftLearning/mslearn-knowledge-mining` in einen lokalen Ordner zu klonen (der Ordner ist beliebig).
@@ -86,7 +86,7 @@ Nachdem Sie nun über die erforderlichen Ressourcen verfügen, können Sie einig
 3. Speichern Sie Ihre Änderungen, klicken Sie dann mit der rechten Maustaste auf den Ordner **01-azure-search** und öffnen ein integriertes Terminal.
 4. Geben Sie den folgenden Befehl ein, um sich über die Azure CLI bei Ihrem Azure-Abonnement anzumelden.
 
-    ```
+    ```powershell
     az login
     ```
 
@@ -94,7 +94,7 @@ Nachdem Sie nun über die erforderlichen Ressourcen verfügen, können Sie einig
 
 5. Geben Sie den folgenden Befehl ein, um die Batchdatei auszuführen: Dadurch wird ein BLOB-Container in Ihrem Speicherkonto erstellt, und die Dokumente im Ordner **data** werden in diesen Container hochgeladen.
 
-    ```
+    ```powershell
     UploadDocs
     ```
 
@@ -243,7 +243,7 @@ Obwohl Sie das Portal zum Erstellen und Ändern von Suchlösungen verwenden kön
 4. Ersetzen Sie in Visual Studio Code in **skillset.json** den Platzhalter **YOUR_COGNITIVE_SERVICES_KEY** durch den Azure KI Services-Schlüssel, den Sie in die Zwischenablage kopiert haben.
 5. Scrollen Sie durch die JSON-Datei. Sie sehen, dass die Datei Definitionen für die Skills enthält, die Sie in der Azure KI-Suche-Benutzeroberfläche im Azure-Portal erstellt haben. Am Ende der Liste der Skills wurde ein weiterer Skill mit der folgenden Definition hinzugefügt:
 
-    ```
+    ```json
     {
         "@odata.type": "#Microsoft.Skills.Text.V3.SentimentSkill",
         "defaultLanguageCode": "en",
@@ -279,7 +279,7 @@ Obwohl Sie das Portal zum Erstellen und Ändern von Suchlösungen verwenden kön
 2. Scrollen Sie durch den Index, und schauen Sie sich die Felddefinitionen an. Einige Felder basieren auf Metadaten und Inhalten im Quelldokument, andere sind die Ergebnisse der Skills im Skillset.
 3. Beachten Sie, dass am Ende der Liste der Felder, die Sie im Azure-Portal definiert haben, zwei zusätzliche Felder hinzugefügt wurden:
 
-    ```
+    ```json
     {
         "name": "sentiment",
         "type": "Edm.String",
@@ -306,19 +306,18 @@ Obwohl Sie das Portal zum Erstellen und Ändern von Suchlösungen verwenden kön
 1. Öffnen Sie in Visual Studio Code im Ordner **modify-search** die Datei **indexer.json**. Daraufhin wird eine JSON-Definition für **margies-indexer** angezeigt, die Felder, die aus den Inhalten und Metadaten von Dokumenten extrahiert wurden (im Abschnitt **fieldMappings**), sowie Werte, die von Skills im Skillset extrahiert wurden (im Abschnitt **outputFieldMappings**), Feldern im Index zuordnet.
 2. Beachten Sie in der Liste **fieldMappings**, dass der **metadata_storage_path**-Wert dem Base-64-codierten Schlüsselfeld zugeordnet ist. Dieser wurde erstellt, als **metadata_storage_path** als Schlüssel zugewiesen und die Option zum Codieren des Schlüssels im Azure-Portal ausgewählt wurde. Darüber hinaus ordnet eine neue Zuordnung dem **url**-Feld explizit den gleichen Wert zu, aber ohne Base-64-Codierung:
 
-    ```
+    ```json
     {
         "sourceFieldName" : "metadata_storage_path",
         "targetFieldName" : "url"
-    }
-    
+    }    
     ```
 
     Alle anderen Metadaten- und Inhaltsfelder im Quelldokument werden implizit gleichnamigen Feldern im Index zugeordnet.
 
 3. Überprüfen Sie den Abschnitt **ouputFieldMappings**, in dem die Ausgaben der Skills im Skillset Indexfeldern zugeordnet werden. Die meisten Zuordnungen entsprechen den Auswahlen, die Sie auf der Benutzeroberfläche vorgenommen haben. Die folgende Zuordnung wurde jedoch hinzugefügt, um den aus dem „sentiment“-Skill extrahierten **sentimentLabel**-Wert dem **sentiment**-Feld zuzuordnen, das zum Index hinzugefügt wurde:
 
-    ```
+    ```json
     {
         "sourceFieldName": "/document/sentimentLabel",
         "targetFieldName": "sentiment"
@@ -330,7 +329,7 @@ Obwohl Sie das Portal zum Erstellen und Ändern von Suchlösungen verwenden kön
 1. Klicken Sie mit der rechten Maustaste auf den Ordner **modify-search**, und öffnen Sie ein integriertes Terminal.
 2. Geben Sie im Terminalbereich für den **modify-search**-Ordner den folgenden Befehl ein, um das Skript **modify-search.cmd** auszuführen, das die JSON-Definitionen an die REST-Schnittstelle sendet und die Indizierung einleitet.
 
-    ```
+    ```powershell
     ./modify-search
     ```
 

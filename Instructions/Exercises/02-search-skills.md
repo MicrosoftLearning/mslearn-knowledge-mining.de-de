@@ -39,14 +39,14 @@ Sie entwickeln Ihre Such-App mit Visual Studio Code. Die Codedateien für Ihre A
 1. Klicken Sie mit der rechten Maustaste auf den Ordner **02-search-skill**, und wählen Sie die Option **Open in Integrated Terminal** (In integriertem Terminal öffnen) aus.
 1. Geben Sie im Terminalfenster den folgenden Befehl ein, um eine authentifizierte Verbindung mit Ihrem Azure-Abonnement herzustellen.
 
-    ```
+    ```powershell
     az login --output none
     ```
 
 8. Melden Sie sich bei Ihrem Azure-Abonnement an, wenn Sie dazu aufgefordert werden. Kehren Sie dann zu Visual Studio Code zurück, und warten Sie, bis der Anmeldevorgang abgeschlossen ist.
 9. Führen Sie den folgenden Befehl aus, um Azure-Speicherorte auflisten.
 
-    ```
+    ```powershell
     az account list-locations -o table
     ```
 
@@ -54,7 +54,7 @@ Sie entwickeln Ihre Such-App mit Visual Studio Code. Die Codedateien für Ihre A
 11. Ändern Sie im Skript **setup.cmd** die Deklarationen der Variablen **subscription_id**, **resource_group** und **location** mit den entsprechenden Werten für Ihre Abonnement-ID, den Namen der Ressourcengruppe und den Standortnamen. Speichern Sie anschließend die Änderungen.
 12. Geben Sie im Terminal für den Ordner **02-search-skill** den folgenden Befehl ein, um das Skript auszuführen:
 
-    ```
+    ```powershell
     ./setup
     ```
 
@@ -109,7 +109,7 @@ In dieser Übung verwenden Sie die REST-Schnittstelle von Azure KI-Suche, um die
 14. Klicken Sie mit der rechten Maustaste auf den Ordner **create-search**, und wählen Sie die Option **Open in Integrated Terminal** (In integriertem Terminal öffnen) aus.
 15. Geben Sie im Terminalbereich für den Ordner **create-search** den folgenden Befehl ein, um das Batchskript auszuführen.
 
-    ```
+    ```powershell
     ./create-search
     ```
 
@@ -150,7 +150,7 @@ Um die Wortzählungsfunktion als benutzerdefinierten Skill zu implementieren, er
     - **Region:** *Die gleiche Region wie Ihre Azure KI-Suche-Ressource*
 
 2. Warten Sie, bis die Bereitstellung abgeschlossen ist, und wechseln Sie dann zur bereitgestellten Funktions-App-Ressource.
-3. Wählen Sie auf der Seite „Übersicht“ für Ihre Funktions-App im Abschnitt unten auf der Seite die Registerkarte **Funktionen** aus. Erstellen Sie anschließend im Portal eine neue Funktion mit den folgenden Einstellungen:
+3. Wählen Sie auf der Seite **Übersicht** die Option **Im Azure-Portal erstellen** aus, um eine neue Funktion mit den folgenden Einstellungen zu erstellen:
     - **Einrichten einer Entwicklungsumgebung**:
         - **Entwicklungsumgebung**: Im Portal entwickeln
     - **Vorlage auswählen**:
@@ -262,7 +262,7 @@ module.exports = async function (context, req) {
 6. Speichern Sie die Funktion, und öffnen Sie dann den Bereich **Testen/Ausführen**.
 7. Ersetzen Sie im Bereich **Testen/Ausführen** den vorhandenen **Text** durch den folgenden JSON-Code. Dieser entspricht dem Schema, das ein Azure KI-Suche-Skill erwartet, mit dem Datensätze mit Daten für mindestens ein Dokument zur Verarbeitung übermittelt werden:
 
-    ```
+    ```json
     {
         "values": [
             {
@@ -284,10 +284,10 @@ module.exports = async function (context, req) {
         ]
     }
     ```
-    
+
 8. Klicken Sie auf **Ausführen**, und sehen Sie sich den Inhalt der von der Funktion zurückgegebenen HTTP-Antwort an. Er entspricht dem Schema, das Azure KI-Suche erwartet, wenn ein Skill angewandt wird, mit dem eine Antwort für jedes Dokument zurückgegeben wird. In diesem Fall besteht die Antwort aus maximal 10 Begriffen in jedem Dokument in absteigender Reihenfolge ihrer Häufigkeit:
 
-    ```
+    ```json
     {
         "values": [
         {
@@ -348,7 +348,7 @@ Nun müssen Sie Ihre Funktion als benutzerdefinierten Skill in das Skillset der 
 13. Klicken Sie mit der rechten Maustaste auf den Ordner **update-search**, und wählen Sie die Option **Open in Integrated Terminal** (In integriertem Terminal öffnen) aus.
 14. Geben Sie im Terminalbereich für den Ordner **update-search** den folgenden Befehl ein, um das Batchskript auszuführen.
 
-    ```
+    ```powershell
     ./update-search
     ```
 
