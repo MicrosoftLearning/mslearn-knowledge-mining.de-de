@@ -16,9 +16,9 @@ In dieser Übung implementieren Sie einen Wissensspeicher für *Margie's Travel*
 
 ## Vorbereiten der Entwicklung einer App in Visual Studio Code
 
-Sie werden Ihre Such-App mit Visual Studio Code entwickeln. Die Codedateien für Ihre App wurden in einem GitHub-Repository bereitgestellt.
+Sie entwickeln Ihre Such-App mit Visual Studio Code. Die Codedateien für Ihre App wurden in einem GitHub-Repository bereitgestellt.
 
-> **Tipp**: Wenn Sie das Repository **mslearn-knowledge-mining** bereits geklont haben, öffnen Sie es in Visual Studio-Code. Führen Sie andernfalls die folgenden Schritte aus, um es in Ihrer Entwicklungsumgebung zu klonen.
+> **Tipp**: Wenn Sie das Repository **mslearn-knowledge-mining** bereits geklont haben, öffnen Sie es in Visual Studio Code. Führen Sie andernfalls die folgenden Schritte aus, um es in Ihrer Entwicklungsumgebung zu klonen.
 
 1. Starten Sie Visual Studio Code.
 1. Öffnen Sie die Palette (UMSCHALT+STRG+P), und führen Sie einen **Git: Clone**-Befehl aus, um das Repository `https://github.com/MicrosoftLearning/mslearn-knowledge-mining` in einen lokalen Ordner zu klonen (der Ordner ist beliebig).
@@ -39,14 +39,14 @@ Sie werden Ihre Such-App mit Visual Studio Code entwickeln. Die Codedateien für
 6. Klicken Sie mit der rechten Maustaste auf den Ordner **03-knowledge-store**, und wählen Sie die Option **In integriertem Terminal öffnen** aus.
 7. Geben Sie im Terminalfenster den folgenden Befehl ein, um eine authentifizierte Verbindung mit Ihrem Azure-Abonnement herzustellen.
 
-    ```
+    ```powershell
     az login --output none
     ```
 
 8. Melden Sie sich bei Ihrem Azure-Abonnement an, wenn Sie dazu aufgefordert werden. Kehren Sie dann zu Visual Studio Code zurück, und warten Sie, bis der Anmeldevorgang abgeschlossen ist.
 9. Führen Sie den folgenden Befehl aus, um Azure-Speicherorte auflisten.
 
-    ```
+    ```powershell
     az account list-locations -o table
     ```
 
@@ -54,8 +54,8 @@ Sie werden Ihre Such-App mit Visual Studio Code entwickeln. Die Codedateien für
 11. Ändern Sie im Skript **setup.cmd** die Deklarationen der Variablen **subscription_id**, **resource_group** und **location** mit den entsprechenden Werten für Ihre Abonnement-ID, den Namen der Ressourcengruppe und den Standortnamen. Speichern Sie anschließend die Änderungen.
 12. Geben Sie im Terminal für den Ordner **03-knowledge-store** den folgenden Befehl ein, um das Skript auszuführen:
 
-    ```
-    setup
+    ```powershell
+    ./setup
     ```
     > **Hinweis**: Das Search CLI-Modul befindet sich in der Vorschau und bleibt möglicherweise bei *- Running ..* hängen. kann ich den Rsync-Vorgang starten. Wenn dies länger als zwei Minuten der Fall ist, drücken Sie STRG+C, um den zeitintensiven Vorgang abzubrechen, und wählen Sie dann **N** aus, wenn Sie gefragt werden, ob Sie das Skript beenden möchten. Es sollte dann erfolgreich abgeschlossen werden.
     >
@@ -131,8 +131,8 @@ Nachdem Sie nun die JSON-Objekte vorbereitet haben, die Ihre Komponenten für di
 4. Klicken Sie mit der rechten Maustaste auf den Ordner **create-search**, und wählen Sie die Option **Open in Integrated Terminal** (In integriertem Terminal öffnen) aus.
 5. Geben Sie im Terminalbereich für den Ordner **create-search** den folgenden Befehl ein, um das Batchskript auszuführen.
 
-    ```
-    create-search
+    ```powershell
+    ./create-search
     ```
 
 6. Wählen Sie nach Abschluss des Skripts im Azure-Portal auf der Seite für Ihre Azure KI-Suche-Ressource die Seite **Indexer** aus, und warten Sie, bis der Indizierungsprozess abgeschlossen ist.
@@ -151,11 +151,11 @@ Die im Skillset „Margie's Travel“ definierten *Objekt*-Projektionen bestehen
 
 1. Zeigen Sie im Azure-Portal das Azure Storage-Konto an, das Sie zuvor erstellt haben.
 2. Wählen Sie die Registerkarte **Speicherbrowser** aus (im linken Bereich), um das Speicherkonto auf der Speicher-Explorer-Oberfläche im Azure-Portal anzuzeigen.
-2. Erweitern Sie **BLOB-Container**, um die Container im Speicherkonto anzuzeigen. Zusätzlich zum Container **margies**, in dem die Quelldaten gespeichert sind, sollten zwei neue Container vorhanden sein: **margies-images** und **margies-knowledge**. Diese wurden durch den Indizierungsprozess erzeugt.
-3. Wählen Sie den Container **margies-knowledge** aus. Er sollte für jedes indizierte Dokument einen Ordner enthalten.
-4. Öffnen Sie einen der Ordner, und laden Sie dann die darin enthaltene Datei **knowledge-projection.json** herunter und öffnen Sie sie. Jede JSON-Datei enthält eine Darstellung eines indizierten Dokuments, einschließlich der angereicherten Daten, die durch das Skillset extrahiert wurden, wie hier gezeigt.
+3. Erweitern Sie **BLOB-Container**, um die Container im Speicherkonto anzuzeigen. Zusätzlich zum Container **margies**, in dem die Quelldaten gespeichert sind, sollten zwei neue Container vorhanden sein: **margies-images** und **margies-knowledge**. Diese wurden durch den Indizierungsprozess erzeugt.
+4. Wählen Sie den Container **margies-knowledge** aus. Er sollte für jedes indizierte Dokument einen Ordner enthalten.
+5. Öffnen Sie einen der Ordner, und laden Sie dann die darin enthaltene Datei **knowledge-projection.json** herunter und öffnen Sie sie. Jede JSON-Datei enthält eine Darstellung eines indizierten Dokuments, einschließlich der angereicherten Daten, die durch das Skillset extrahiert wurden, wie hier gezeigt.
 
-```
+```json
 {
     "file_id":"abcd1234....",
     "file_name":"Margies Travel Company Info.pdf",
@@ -191,7 +191,7 @@ Die Möglichkeit, *Objekt*-Projektionen wie diese zu erstellen, ermöglicht es I
 
 Die im Skillset definierten *Datei* Projektionen erstellen JPEG-Dateien für jedes Bild, das während des Indizierungsprozesses aus den Dokumenten extrahiert wurde.
 
-1. Wählen Sie in der Speicher-Explorer-Oberfläche im Azure-Portal den BLOB-Container **margies-images** aus. Dieser Container enthält einen Ordner für jedes Dokument, das Bilder enthält.
+1. Wählen Sie in der Oberfläche *Speicherbrowser* im Azure-Portal den Blobcontainer **margies-images** aus. Dieser Container enthält einen Ordner für jedes Dokument, das Bilder enthält.
 2. Öffnen Sie einen der Ordner, und zeigen Sie den Inhalt an – jeder Ordner enthält mindestens eine \*JPG-Datei.
 3. Öffnen Sie eine der Bilddateien, um zu überprüfen, ob sie aus den Dokumenten extrahierte Bilder enthalten.
 
@@ -201,7 +201,7 @@ Die Möglichkeit, *Datei*-Projektionen wie diese zu generieren, macht die Indizi
 
 Die im Skillset definierten *Tabellen*-Projektionen bilden ein relationales Schema angereicherter Daten.
 
-1. Erweitern Sie auf der Speicher-Explorer-Oberfläche im Azure-Portal **Tabellen**.
+1. Erweitern Sie in der Oberfläche *Speicherbrowser* im Azure-Portal die Option **Tabellen**.
 2. Wählen Sie die Tabelle **docs** aus, um deren Spalten anzuzeigen. Die Spalten enthalten einige Standardspalten der Azure Storage-Tabelle – um diese auszublenden, ändern Sie die **Spaltenoptionen**, um nur die folgenden Spalten auszuwählen:
     - **document_id** (die durch den Indizierungsprozess automatisch erzeugte Schlüsselspalte)
     - **file_id** (die verschlüsselte Datei-URL)
