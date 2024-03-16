@@ -222,13 +222,8 @@ Der Indexer wird ausgeführt und erstellt einen Index der 210 Textdateien. Sie 
 
 Nun erstellen Sie eine Python-Funktions-App, das Ihr benutzerdefiniertes Cognitive Search-Skillset aufruft. Die Funktions-App nutzt Ihr benutzerdefiniertes Textklassifizierungsmodell, um Ihren Suchindex zu erweitern.
 
-1. Öffnen Sie VScode und klonen Sie im Terminal dieses GitHub-Repository auf Ihren Computer.
-
-    ```bash
-    git clone https://github.com/MicrosoftLearning/mslearn-doc-intelligence movie-genre-function
-    ```
-
-1. Öffnen Sie in Visual Studio Code den Ordner **movie-genre-function**, den Sie soeben geklont haben.
+1. [Laden Sie die erforderlichen Dateien herunter](https://github.com/MicrosoftLearning/mslearn-knowledge-mining/raw/main/Labfiles/04-enrich-custom-classes/movie-genre-function.zip), und extrahieren Sie den Ordner, der alle Dateien enthält.
+1. Öffnen Sie in Visual Studio Code den Ordner **movie-genre-function**, den Sie soeben heruntergeladen haben.
 
     ![Screenshot: Visual Studio Code mit Anzeige des Dialogfelds zum Optimieren der Funktions-App](../media/04-media/optimize-visual-studio-code.png)
 1. Wenn Sie alle erforderlichen Erweiterungen installiert haben, werden Sie aufgefordert, das Projekt zu optimieren. Wählen Sie **Ja** aus.
