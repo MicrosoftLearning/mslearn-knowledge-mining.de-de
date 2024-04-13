@@ -12,7 +12,7 @@ Sie benötigen folgendes, um diese Übung erfolgreich auszuführen:
 - Die [Postmann](https://www.postman.com/downloads/) Anwendung
 - Ein Azure-Abonnement
 - Azure KI Search-Service
-- Die [Postman-Beispielsammlung](https://github.com/Azure/cognitive-search-vector-pr/tree/main/postman-collection) *Vector-Search-Quickstart.postman_collection v1.0 json*.
+- Die Postman-Beispielsammlung befindet sich in diesem Repository - *Vector-Search-Quickstart.postman_collection v1.0 json*.
 
 > **Hinweis** Weitere Informationen zur Postman-App finden Sie bei Bedarf [hier](https://learn.microsoft.com/en-us/azure/search/search-get-started-rest).
 
@@ -20,24 +20,24 @@ Sie benötigen folgendes, um diese Übung erfolgreich auszuführen:
 
 Richten Sie zunächst Ihr Projekt ein, indem Sie die folgenden Schritte ausführen:
 
-1. Notieren Sie sich die **URL** und den **Schlüssel** ihres Cognitive Search-Diensts.
+1. Notieren Sie sich die **URL **und den **Schlüssel** aus Ihrem Azure KI Search-Dienst.
 
     ![Abbildung des Speicherorts für Dienstname und Schlüssel.](../media/vector-search/search keys.png)
 
-1. Laden Sie die [Postman-Beispielsammlung](https://github.com/Azure/cognitive-search-vector-pr/tree/main/postman-collection) herunter. 
+1. Laden Sie die [Postman-Beispielsammlung](https://github.com/MicrosoftLearning/mslearn-knowledge-mining/blob/main/Labfiles/10-vector-search/Vector%20Search.postman_collection%20v1.0.json) herunter.
 1. Öffnen Sie Postman und importieren die Sammlung, indem Sie die Schaltfläche **Importieren** auswählen und den Sammlungsordner in das Feld ziehen und ablegen.
 
     ![Abbildung des Dialogfelds „Importieren“](../media/vector-search/import.png)
 
 1. Wählen Sie die Schaltfläche **Kopie** aus, um eine Kopie der Sammlung zu erstellen und einen eindeutigen Namen hinzuzufügen.
 1. Klicken Sie mit der rechten Maustaste auf ihren Sammlungsnamen, und wählen Sie **Bearbeiten** aus.
-1. Wählen Sie die Registerkarte **Variablen** aus, und geben Sie die folgenden Werte mithilfe des Suchdiensts und den Indexnamen ihres Cognitive Search-Diensts ein:
+1. Wählen Sie die Registerkarte **Variablen** aus, und geben Sie die folgenden Werte mithilfe des Suchdiensts und den Indexnamen ihres Azure KI Search-Diensts ein:
 
     ![Diagramm zeigt ein Beispiel für Variableneinstellungen](../media/vector-search/variables.png)
 
 1. Speichern Sie Ihre Änderungen, indem Sie die Schaltfläche **Speichern** auswählen.
 
-Sie sind jetzt bereit, Ihre Anforderungen an den Azure Cognitive Search-Dienst zu senden.
+Sie sind jetzt bereit, Ihre Anforderungen an den Azure KI Search-Dienst zu senden.
 
 ## Erstellen eines Indexes
 
