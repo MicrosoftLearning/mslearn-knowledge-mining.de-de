@@ -15,7 +15,7 @@ In dieser Übung klonen Sie eine vorhandene C#-Lösung und führen sie aus, um d
 
 Um Zeit zu sparen, wählen Sie diese ARM-Vorlage aus, um Ressourcen zu erstellen, die Sie später in der Übung benötigen:
 
-1. [![Bereitstellen in Azure](../media/07-media/deploy-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2Fmslearn-doc-intelligence%2Fmain%2Fcognitive-search%2Fazuredeploy.json) Wählen Sie diesen Link aus, um einen Azure Cognitive Search-Dienst zu erstellen.
+1. [Bereitstellen von Ressourcen in Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2Fmslearn-knowledge-mining%2Fmain%2FLabfiles%2F07-exercise-add-to-index-use-push-api%20lab-files%2Fazuredeploy.json) – Wählen Sie diesen Link aus, um Ihre Azure AI-Ressourcen zu erstellen.
     ![Screenshot: Optionen, die beim Bereitstellen von Ressourcen in Azure angezeigt werden](../media/07-media/deploy-azure-resources.png)
 1. Klicken Sie unter **Ressourcengruppe** auf **Neu erstellen**, und nennen Sie die Ressourcengruppe **cog-search-language-exe**.
 1. Wählen Sie unter **Region** eine [unterstützte Region](/azure/ai-services/language-service/custom-text-classification/service-limits#regional-availability) aus, die sich in Ihrer Nähe befindet.
