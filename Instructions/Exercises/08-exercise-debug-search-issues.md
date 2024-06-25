@@ -15,7 +15,7 @@ In dieser Übung erstellen Sie eine Azure KI-Suche-Lösung, importieren einige B
 
 Bevor Sie mit einer Debugsitzung beginnen können, müssen Sie einen Azure Cognitive Search-Dienst erstellen.
 
-1. [![Schaltfläche „Bereitstellen von Azure-Ressourcen“.](../media/08-media/deploy-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fazure-search-knowledge-mining%2Fmaster%2Fazuredeploy.json) wählen Sie diese Schaltfläche aus, um alle Ressourcen bereitzustellen, die Sie im Azure-Portal benötigen.
+1. [Bereitstellen von Ressourcen in Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fazure-search-knowledge-mining%2Fmain%2Fazuredeploy.json) – Wählen Sie diesen Link aus, um alle Ressourcen bereitzustellen, die Sie im Azure-Portal benötigen.
 
     ![Screenshot: ARM-Bereitstellungsvorlage mit eingegebenen Feldern.](../media/08-media/arm-template-deployment.png)
 
@@ -117,7 +117,7 @@ Der Indexer beginnt nun damit, 50 Dokumente zu erfassen. Wenn Sie jedoch den St
 1. Jetzt müssen Sie sicherstellen, dass Ihr Skillset an eine Azure KI Services-Ressource angefügt ist, da Sie sonst auf die Basisquote stoßen und der Indexer ein Timeout erleidet. Wählen Sie dazu im linken Bereich **Skillsets** aus, und wählen Sie dann Ihr **hotels-sample-skillset** aus.
 
     ![Ein Screenshot zeigt die Skillset-Liste.](../media/08-media/update-skillset.png)
-1. Wählen Sie die Registerkarte **KI Services** aus, und wählen Sie dann die KI Services-Ressource in der Liste aus.
+1. Wählen Sie **KI-Dienst verbinden** aus, und wählen Sie dann die KI-Dienstressource in der Liste aus.
 
     ![Ein Screenshot zeigt die Azure KI Services-Ressource zum Anfügen an das Skillset.](../media/08-media/skillset-attach-service.png)
 1. Wählen Sie **Speichern**.
