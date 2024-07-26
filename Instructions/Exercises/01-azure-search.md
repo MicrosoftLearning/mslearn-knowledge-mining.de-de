@@ -39,7 +39,7 @@ Die Lösung, die Sie für Margie's Travel erstellen werden, benötigt die folgen
 
 Wenn Sie noch keine in Ihrem Abonnement haben, müssen Sie eine **Azure KI Services**-Ressource bereitstellen. Ihre Suchlösung verwendet diese, um die Daten im Datenspeicher mit KI-generierten Erkenntnissen anzureichern.
 
-1. Kehren Sie zur Startseite des Azure-Portals zurück. Wählen Sie dann die Schaltfläche **＋Ressource erstellen** aus, suchen Sie nach *Azure KI Services* und erstellen Sie eine **Azure KI Services Multi-Service-Kontoressource** mit den folgenden Einstellungen:
+1. Kehren Sie zur Startseite des Azure-Portals zurück und wählen Sie die Schaltfläche **&#65291;Ressource erstellen**, suchen Sie nach *Azure KI Services* und erstellen Sie eine **Azure KI Services Multi-Dienstkonto** Ressource mit den folgenden Einstellungen:
     - **Abonnement:** *Geben Sie Ihr Azure-Abonnement an.*
     - **Ressourcengruppe**: *Die gleiche Ressourcengruppe wie Ihre Azure KI-Suche-Ressource*
     - **Region**: *Der gleiche Ort wie Ihre Azure KI-Suche-Ressource*
@@ -95,7 +95,7 @@ Nachdem Sie nun über die erforderlichen Ressourcen verfügen, können Sie einig
 5. Geben Sie den folgenden Befehl ein, um die Batchdatei auszuführen: Dadurch wird ein BLOB-Container in Ihrem Speicherkonto erstellt, und die Dokumente im Ordner **data** werden in diesen Container hochgeladen.
 
     ```powershell
-    UploadDocs
+    .\UploadDocs.cmd
     ```
 
 ## Indizieren der Dokumente
@@ -153,7 +153,7 @@ Nachdem sich die Dokumente jetzt an der sichtigen Stelle befinden, können Sie e
     1. Extrahieren der Felder und Inhalte von Dokumentmetadaten aus der Datenquelle
     2. Ausführen des Skillset für kognitive Skills aus, um zusätzliche angereicherte Felder zu generieren
     3. Zuordnen der extrahierten Felder zum Index
-15. Zeigen Sie in der unteren Hälfte der Seite **Übersicht** für Ihre Azure KI-Suche-Ressource die Registerkarte **Indexer** an, auf der der neu erstellte **margies-indexer** angezeigt werden sollte. Warten Sie einige Minuten, und klicken Sie auf **&orarr; Aktualisieren**, bis der **Status** „Erfolgreich“ angezeigt wird.
+15. Auf der linken Seite sehen Sie die Seite **Indexers**, die den neu erstellten **margies-indexer** zeigen sollte. Warten Sie einige Minuten, und klicken Sie auf **&orarr; Aktualisieren**, bis der **Status** „Erfolgreich“ angezeigt wird.
 
 ## Durchsuchen des Index
 
