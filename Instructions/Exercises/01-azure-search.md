@@ -39,7 +39,7 @@ Die Lösung, die Sie für Margie's Travel erstellen werden, benötigt die folgen
 
 Wenn Sie noch keine in Ihrem Abonnement haben, müssen Sie eine **Azure KI Services**-Ressource bereitstellen. Ihre Suchlösung verwendet diese, um die Daten im Datenspeicher mit KI-generierten Erkenntnissen anzureichern.
 
-1. Kehren Sie zur Homepage des Azure-Portals zurück. Wählen Sie dann die Schaltfläche **&#65291;Ressource erstellen** aus, suchen Sie nach *Azure KI Services*, und erstellen Sie eine **Azure KI Services**-Ressource mit den folgenden Einstellungen:
+1. Kehren Sie zur Startseite des Azure-Portals zurück. Wählen Sie dann die Schaltfläche **＋Ressource erstellen** aus, suchen Sie nach *Azure KI Services* und erstellen Sie eine **Azure KI Services Multi-Service-Kontoressource** mit den folgenden Einstellungen:
     - **Abonnement:** *Geben Sie Ihr Azure-Abonnement an.*
     - **Ressourcengruppe**: *Die gleiche Ressourcengruppe wie Ihre Azure KI-Suche-Ressource*
     - **Region**: *Der gleiche Ort wie Ihre Azure KI-Suche-Ressource*
@@ -460,6 +460,13 @@ Die Web-App enthält bereits Code zum Verarbeiten und Rendern der Suchergebnisse
     - **skyscraper** (Beachten Sie, dass dieses Wort nicht im eigentlichen Inhalt von Dokumenten enthalten ist, sondern in den *Bildbeschriftungen* und *Bildtags*, die für Bilder in einigen Dokumenten generiert wurden.)
     - **Mojave desert** (Beachten Sie, dass dieser Begriff in einigen Dokumenten als *Ort* angegeben wird.)
 10. Schließen Sie die Browserregisterkarte mit der Website von Margie's Travel, und kehren Sie zu Visual Studio Code zurück. Drücken Sie dann im Python-Terminal für den Ordner **margies-travel** (in dem die .NET- bzw. Flask-Anwendung ausgeführt wird) STRG+C, um die App zu beenden.
+
+## Löschen von Übungsressourcen
+
+Nachdem Sie die Übung abgeschlossen haben, löschen Sie alle nicht länger benötigten Ressourcen. Löschen der Azure-Ressourcen:
+
+1. Wählen Sie im **Azure-Portal** die Option „Ressourcengruppen“ aus.
+1. Wählen Sie die Ressourcengruppe aus, die Sie nicht benötigen, und wählen Sie dann **Ressourcengruppe löschen** aus.
 
 ## Weitere Informationen
 
