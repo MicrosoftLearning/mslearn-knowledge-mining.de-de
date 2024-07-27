@@ -28,7 +28,7 @@ Sie entwickeln Ihre Such-App mit Visual Studio Code. Die Codedateien für Ihre A
 > **Hinweis**: Wenn Sie die Übung zum **[Erstellen einer Azure KI-Suche-Lösung](01-azure-search.md)** bereits abgeschlossen haben und diese Azure-Ressourcen noch in Ihrem Abonnement verfügbar sind, können Sie diesen Abschnitt überspringen und mit dem Abschnitt **Erstellen einer Suchlösung** beginnen. Führen Sie andernfalls die folgenden Schritte aus, um die erforderlichen Azure-Ressourcen bereitzustellen.
 
 1. Öffnen Sie in einem Webbrowser das Azure-Portal unter `https://portal.azure.com`, und melden Sie sich mit dem Microsoft-Konto an, das Ihrem Azure-Abonnement zugeordnet ist.
-2. Suchen Sie in der oberen Suchleiste nach *Azure KI Services*, wählen Sie **Azure KI Services** aus und erstellen Sie eine Azure KI Services Multi-Service-Kontoressource mit den folgenden Einstellungen:
+2. Suchen Sie in der oberen Suchleiste nach *Azure KI Services*, wählen Sie **Azure KI Services Multi-Service-Konto** aus und erstellen Sie eine Azure KI Services Multi-Service-Kontoressource mit den folgenden Einstellungen:
     - **Abonnement:** *Geben Sie Ihr Azure-Abonnement an.*
     - **Ressourcengruppe**: *Wählen Sie eine Ressourcengruppe aus, oder erstellen Sie eine (wenn Sie ein eingeschränktes Abonnement verwenden, sind Sie möglicherweise nicht berechtigt, eine neue Ressourcengruppe zu erstellen. Verwenden Sie dann die bereitgestellte Gruppe.)*
     - **Region:** *Wählen Sie aus verfügbaren Regionen, die sich geografisch in Ihrer Nähe befinden.*
@@ -371,6 +371,13 @@ Nachdem Sie nun über einen Index verfügen, können Sie ihn durchsuchen.
     ```
 
     Diese Abfrage ruft die Felder **url** und **top_words** für alle Dokumente ab, in denen *Las Vegas* erwähnt wird.
+
+## Löschen von Übungsressourcen
+
+Nachdem Sie die Übung abgeschlossen haben, löschen Sie alle nicht länger benötigten Ressourcen. Löschen der Azure-Ressourcen:
+
+1. Wählen Sie im **Azure-Portal** die Option „Ressourcengruppen“ aus.
+1. Wählen Sie die Ressourcengruppe aus, die Sie nicht benötigen, und wählen Sie dann **Ressourcengruppe löschen** aus.
 
 ## Weitere Informationen
 
