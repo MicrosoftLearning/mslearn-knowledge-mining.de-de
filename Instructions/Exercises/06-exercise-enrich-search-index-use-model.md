@@ -54,6 +54,7 @@ Sie erstellen jetzt ein Regressionsmodell und trainieren es mithilfe einer Azure
 
     ![Screenshot: Pipeline sieht gut aus, und Schaltfläche „Senden“ ist hervorgehoben](../media/06-media/submit-pipeline.png)
 1. Wählen Sie im Bereich **Pipelineauftrag einrichten** die Option **Grundlagen** aus.
+   > Hinweis: Wenn Sie den Bereich **Pipelineauftrag einrichten** zuvor ausgeblendet haben, können Sie ihn erneut öffnen, indem Sie **Konfigurieren und Übermitteln** auswählen.
 1. Wählen Sie unter dem Experimentnamen **Neu erstellen** aus.
 1. Geben Sie in **Name des neuen Experiments** den Namen **linear-regression-training** ein.
 1. Wählen Sie **Überprüfen + Absenden** und dann **Absenden** aus.
