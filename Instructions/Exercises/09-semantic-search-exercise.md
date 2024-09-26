@@ -13,7 +13,7 @@ In dieser Übung werden Sie Semantischer Sortierer einem Index hinzufügen und f
 
 1. Öffnen Sie das Azure-Portal, und melden Sie sich an.
 1. Wählen Sie **Alle Ressourcen** und dann Ihren Suchdienst aus.
-1. Wählen Sie im Navigationsbereich **Semantischer Sortierer (Vorschau)** aus.
+1. Wählen Sie im Navigationsbereich **Semantischer Bewerter** aus.
 1. Wählen Sie unter **Verfügbarkeit** in der Option **Free** die Option **Plan auswählen**aus.
 
 ![Screenshot des Dialogfelds „Semantischer Sortierer“](../media/semantic-search/semanticsearch.png)

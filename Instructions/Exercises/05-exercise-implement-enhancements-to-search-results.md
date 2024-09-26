@@ -190,7 +190,7 @@ Dieses Hotel verfügt über die entsprechenden Begriffe „See“ im Feld `Hotel
 
     Die Suchbewertung hat sich von **0,9433406** auf **3,5707965** erhöht. Alle anderen Hotels weisen jedoch ebenfalls höhere berechnete Bewertungen auf. Dieses Hotel erscheint jetzt zuletzt in den Ergebnissen.
 
-## Löschen von Übungsressourcen
+## Bereinigung
 
 Nachdem Sie die Übung abgeschlossen haben, löschen Sie alle nicht länger benötigten Ressourcen.
 

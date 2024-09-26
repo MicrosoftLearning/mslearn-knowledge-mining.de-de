@@ -56,7 +56,7 @@ Wenn Sie noch keine in Ihrem Abonnement haben, müssen Sie eine **Azure KI Servi
     - **Speicherkontoname:** *Geben Sie einen eindeutigen Namen ein.*
     - **Region**: *Wählen Sie eine beliebige verfügbare Region aus.*
     - **Leistung**: Standard
-    - **Replikation**: Lokal redundanter Speicher (LRS)
+    - **Redundanz**: Lokal redundanter Speicher (LRS)
     - Stellen Sie auf der Registerkarte **Erweitert** sicher, dass das Kontrollkästchen neben *Zulassen der Aktivierung des anonymen Zugriffs auf einzelne Container* aktiviert ist.
 2. Warten Sie, bis die Bereitstellung abgeschlossen ist, und wechseln Sie dann zur bereitgestellten Ressource.
 3. Notieren Sie sich auf der Seite **Übersicht** die **Abonnement-ID**. Diese gibt das Abonnement an, in dem das Speicherkonto bereitgestellt wird.
@@ -231,7 +231,7 @@ Obwohl Sie das Portal zum Erstellen und Ändern von Suchlösungen verwenden kön
 1. Kehren Sie im Azure-Portal zur Seite **Übersicht** für Ihre Azure KI-Suche-Ressource zurück. Suchen Sie im oberen Abschnitt der Seite nach der **URL** für Ihre Ressource (die wie **https://resource_name.search.windows.net** aussieht), und kopieren Sie diese in die Zwischenablage.
 2. Erweitern Sie in Visual Studio Code im Explorer-Bereich den Ordner **01-azure-search** und seinen Unterordner **modify-search**, und wählen Sie **modify-search.cmd** aus, um ihn zu öffnen. Sie verwenden diese Skriptdatei, um *cURL*-Befehle auszuführen, die JSON-Definitionen an die REST-Schnittstelle von Azure KI Services senden.
 3. Ersetzen Sie in **modify-search.cmd** den Platzhalter **YOUR_SEARCH_URL** durch die in die Zwischenablage kopierte URL.
-4. Zeigen Sie im Azure-Portal die Seite **Schlüssel** für Ihre Azure KI-Suche-Ressource an, und kopieren Sie den **primären Administratorschlüssel** in die Zwischenablage.
+4. Rufen Sie im Azure-Portal im Abschnitt **Einstellungen** die Seite **Schlüssel** für Ihre Azure KI-Suche-Ressource auf und kopieren Sie den **Primären Admin-Schlüssel** in die Zwischenablage.
 5. Ersetzen Sie in Visual Studio Code den Platzhalter **YOUR_ADMIN_KEY** durch den Schlüssel, den Sie in die Zwischenablage kopiert haben.
 6. Speichern Sie die Änderungen in **modify-search.cmd**. (Führen Sie die Datei aber noch nicht aus!)
 
@@ -239,7 +239,7 @@ Obwohl Sie das Portal zum Erstellen und Ändern von Suchlösungen verwenden kön
 
 1. Öffnen Sie in Visual Studio Code im Ordner **modify-search** die Datei **skillset.json**. Daraufhin wird eine JSON-Definition für **margies-skillset** angezeigt.
 2. Beachten Sie das **cognitiveServices**-Objekt am Anfang der Skillsetdefinition, das für die Verbindung der Azure KI Services-Ressource mit dem Skillset verwendet wird.
-3. Öffnen Sie im Azure-Portal Ihre Azure KI Services-Ressource (<u>nicht</u> Ihre Azure KI-Suche-Ressource!), und zeigen Sie die zugehörige **Schlüssel**-Seite an. Kopieren Sie dann den **Schlüssel 1** in die Zwischenablage.
+3. Öffnen Sie im Azure-Portal Ihre Azure KI Services-Ressource (<u>nicht</u> Ihre Azure KI-Suche-Ressource!) und sehen Sie sich im Abschnitt **Ressourcenverwaltung** die Seite **Schlüssel und Endpunkt** an. Kopieren Sie dann den **KEY 1** in die Zwischenablage.
 4. Ersetzen Sie in Visual Studio Code in **skillset.json** den Platzhalter **YOUR_COGNITIVE_SERVICES_KEY** durch den Azure KI Services-Schlüssel, den Sie in die Zwischenablage kopiert haben.
 5. Scrollen Sie durch die JSON-Datei. Sie sehen, dass die Datei Definitionen für die Skills enthält, die Sie in der Azure KI-Suche-Benutzeroberfläche im Azure-Portal erstellt haben. Am Ende der Liste der Skills wurde ein weiterer Skill mit der folgenden Definition hinzugefügt:
 
@@ -375,13 +375,13 @@ Nachdem Sie nun über einen brauchbaren Index verfügen, können Sie ihn in eine
     **C#**
 
     ```
-    dotnet add package Azure.Search.Documents --version 11.1.1
+    dotnet add package Azure.Search.Documents --version 11.6.0
     ```
 
     **Python**
 
     ```
-    pip install azure-search-documents==11.0.0
+    pip install azure-search-documents==11.5.1
     ```
 
 3. Zeigen Sie den Inhalt des Ordners **margies-travel** an, und beachten Sie, dass er eine Datei für Konfigurationseinstellungen enthält:
@@ -461,7 +461,7 @@ Die Web-App enthält bereits Code zum Verarbeiten und Rendern der Suchergebnisse
     - **Mojave desert** (Beachten Sie, dass dieser Begriff in einigen Dokumenten als *Ort* angegeben wird.)
 10. Schließen Sie die Browserregisterkarte mit der Website von Margie's Travel, und kehren Sie zu Visual Studio Code zurück. Drücken Sie dann im Python-Terminal für den Ordner **margies-travel** (in dem die .NET- bzw. Flask-Anwendung ausgeführt wird) STRG+C, um die App zu beenden.
 
-## Löschen von Übungsressourcen
+## Bereinigung
 
 Nachdem Sie die Übung abgeschlossen haben, löschen Sie alle nicht länger benötigten Ressourcen. Löschen der Azure-Ressourcen:
 

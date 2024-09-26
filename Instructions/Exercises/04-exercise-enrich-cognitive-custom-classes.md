@@ -127,8 +127,8 @@ In dieser Übung werden 210 Textdateien verwendet, die eine Zusammenfassung der
 
 1. Geben Sie unter **Name****movie-genre-classifier** ein.
 1. Wählen Sie für **Text primary language** (Primäre Textsprache) die Option **Englisch (USA)** aus.
-1. Geben Sie unter **Beschreibung****A model that can identify a movie genre from the summary** (Modell, das ein Filmgenre anhand der Zusammenfassung identifizieren kann) ein.
 1. Wählen Sie die Option **Ja, mehrsprachiges Dataset aktivieren** aus.
+1. Geben Sie unter **Beschreibung****A model that can identify a movie genre from the summary** (Modell, das ein Filmgenre anhand der Zusammenfassung identifizieren kann) ein.
 1. Wählen Sie **Weiter** aus.
 
     ![Screenshot: Auswählen des Containers mit den Beispieldaten](../media/04-media/choose-container.png)
@@ -485,7 +485,7 @@ Jedes Dokument im Index sollte ein neues `textclass`-Feld aufweisen, das durchsu
 
 Nachdem Sie die Übung abgeschlossen haben, löschen Sie alle nicht länger benötigten Ressourcen.
 
-### Löschen von Übungsressourcen
+### Bereinigung
 
 1. Wechseln Sie im Azure-Portal zur Startseite, und wählen Sie **Ressourcengruppen** aus.
 1. Wählen Sie die Ressourcengruppe aus, die Sie nicht benötigen, und wählen Sie dann **Ressourcengruppe löschen** aus.
