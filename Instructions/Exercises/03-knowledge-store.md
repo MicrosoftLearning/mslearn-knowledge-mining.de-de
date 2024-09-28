@@ -216,7 +216,7 @@ Die im Skillset definierten *Tabellen*-Projektionen bilden ein relationales Sche
 
 Die Möglichkeit, *Tabellen*-Projektionen zu erstellen, ermöglicht es Ihnen, Analyse- und Berichtslösungen zu erstellen, die das relationale Schema abfragen, z. B. die Verwendung von Microsoft Power BI. Die automatisch generierten Schlüsselspalten können verwendet werden, um die Tabellen in Abfragen zu verknüpfen –- zum Beispiel, um alle in einem bestimmten Dokument erwähnten Orte zurückzugeben.
 
-## Löschen von Übungsressourcen
+## Bereinigung
 
 Nachdem Sie die Übung abgeschlossen haben, löschen Sie alle nicht länger benötigten Ressourcen. Löschen der Azure-Ressourcen:
 
