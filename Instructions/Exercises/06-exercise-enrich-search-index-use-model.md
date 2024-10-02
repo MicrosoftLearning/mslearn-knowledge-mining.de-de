@@ -176,9 +176,9 @@ Ihr Rückschlusscluster sollte jetzt einsatzbereit sein. Sie haben auch den Bewe
 1. Wählen Sie **Bereitstellen** und dann **Echtzeitendpunkt** aus.
 
     ![Ein Screenshot des Bereichs „Endpunkt auswählen“.](../media/06-media/04-select-endpoint.png)
-1. Geben Sie für **Name** einen eindeutigen Namen ein, z. B. **car-evaluation-endpoint-1440637584**.
+1. Geben Sie für **Endpunktname** einen eindeutigen Namen ein, z. B. **car-evaluation-endpoint-1440637584** .
 1. Wählen Sie für **Computetyp** die Option **Verwaltet** aus.
-1. Wählen Sie für **Authentifizierungstyp** die **schlüsselbasierte Authentifizierung** aus.
+1. Wählen Sie für **Authentifizierungstyp** die Option **Schlüsselbasiert**.
 1. Wählen Sie **Weiter** und dann **Weiter** aus.
 1. Wählen Sie erneut **Weiter** aus.
 1. Browsen Sie im Feld **Auswahl eines Bewertungsskripts für Rückschließen** zu Ihrer aktualisierten `score.py`-Datei, und wählen Sie diese aus.
@@ -253,7 +253,7 @@ Als nächstes erstellen Sie einen neuen Cognitive Search-Dienst und reichern ein
 
     ![Screenshot: Auswählen eines Speicherkontos im Azure-Portal](../media/06-media/navigate-storage-account.png)
 1. Wählen Sie das Speicherkonto aus, z. B. **amlforacsworks1440637584**.
-1. Wählen Sie unter **Einstellungen** die Option **Konfiguration** aus. Legen Sie dann **Anonymen Blob-Zugriff zulassen** auf **Aktiviert** fest.
+1. Wählen Sie unter **Einstellungen** die Option **Konfiguration** aus. Legen Sie dann **Anonymen Blob-Zugriff erlauben** auf **Aktiviert** fest.
 1. Wählen Sie **Speichern**.
 1. Wählen Sie unter **Datenspeicher** die Option **Container** aus. 
 1. Erstellen Sie einen neuen Container zum Speichern von Indexdaten; wählen Sie **+ Container** aus.
@@ -462,7 +462,7 @@ Sie ersetzen nun die Personennamenanreicherung durch das benutzerdefinierte Azur
 
 ### Aktualisieren der Ausgabefeldzuordnungen
 
-1. Wechseln Sie zurück zum Bereich **Übersicht** und wählen **Indexer** aus, dann wählen Sie den **azureblob-indexer** aus.
+1. Gehen Sie zurück zum Bereich **Übersicht** Ihres Suchdienstes und wählen Sie **Indexer** und anschließend **azureblob-indexer** aus.
 1. Wählen Sie die Registerkarte **Indexerdefinition (JSON)** aus, und ändern Sie dann den Wert **outputFieldMappings** in:
 
     ```json
@@ -486,9 +486,9 @@ Das aktualisierte Skillset fügt nun dem Testfahrzeugdokument in Ihrem Index ein
 1. Klicken Sie auf **Suchen**.
 1. Scrollen Sie zum Ende der Ergebnisse.
     ![Screenshot: vorhergesagtes Fahrzeugpreisfeld, das den Suchergebnissen hinzugefügt wurde](../media/06-media/test-results-search-explorer.png)
-Das Auffüllfeld `predicted_price` sollte angezeigt werden.
+Sie sollten das ausgefüllte Feld `predicted_price` finden.
 
-## Löschen von Übungsressourcen
+## Bereinigung
 
 Nachdem Sie die Übung abgeschlossen haben, löschen Sie alle nicht länger benötigten Ressourcen. Löschen der Azure-Ressourcen:
 

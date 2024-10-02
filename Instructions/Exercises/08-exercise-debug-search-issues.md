@@ -126,5 +126,6 @@ Der Indexer beginnt nun damit, 50 Dokumente zu erfassen. Wenn Sie jedoch den St
 
     ![Screenshot: Alle Probleme behoben.](../media/08-media/warnings-fixed-indexer.png)
 
-> [!TIP]
-> Nachdem Sie nun die Übung abgeschlossen und die Erkundung der Azure KI-Suche-Dienste beendet haben, löschen Sie die Azure-Ressourcen, die Sie während der Übung erstellt haben. Am einfachsten ist es, die Ressourcengruppe **acs-cognitive-search-exercise** zu löschen.
+### Bereinigung
+
+ Nachdem Sie nun die Übung abgeschlossen und die Erkundung der Azure KI-Suche-Dienste beendet haben, löschen Sie die Azure-Ressourcen, die Sie während der Übung erstellt haben. Am einfachsten ist es, die Ressourcengruppe **acs-cognitive-search-exercise** zu löschen.
