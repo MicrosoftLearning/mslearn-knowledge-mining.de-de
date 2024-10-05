@@ -141,22 +141,21 @@ Um die Wortzählungsfunktion als benutzerdefinierten Skill zu implementieren, er
 > **Hinweis:** In dieser Übung erstellen Sie eine einfache Node.JS-Funktion mithilfe der Codebearbeitungsfunktionen im Azure-Portal. In einer Produktionslösung würden Sie in der Regel eine Entwicklungsumgebung wie Visual Studio Code verwenden, um eine Funktions-App in Ihrer bevorzugten Sprache (z. B. C#, Python, Node.JS oder Java) zu erstellen und diese im Rahmen eines DevOps-Prozesses in Azure zu veröffentlichen.
 
 1. Erstellen Sie im Azure-Portal auf der Seite **Start** eine neue **Funktions-App**-Ressource mit den folgenden Einstellungen:
+    - **Hostingplan**: Verbrauch
     - **Abonnement:** *Ihr Abonnement*
     - **Ressourcengruppe**: *Die gleiche Ressourcengruppe wie Ihre Azure KI-Suche-Ressource*
     - **Name der Funktions-App**: *Ein eindeutiger Name*
-    - **Veröffentlichen**: Code
     - **Laufzeitstapel**: Node.js
     - **Version:** 18 LTS
     - **Region:** *Die gleiche Region wie Ihre Azure KI-Suche-Ressource*
+    - **Betriebssystem:** Windows
 
 2. Warten Sie, bis die Bereitstellung abgeschlossen ist, und wechseln Sie dann zur bereitgestellten Funktions-App-Ressource.
-3. Wählen Sie auf der Seite **Übersicht** die Option **Im Azure-Portal erstellen** aus, um eine neue Funktion mit den folgenden Einstellungen zu erstellen:
-    - **Einrichten einer Entwicklungsumgebung**:
-        - **Entwicklungsumgebung**: Im Portal entwickeln
-    - **Vorlage auswählen**:
-        - **Vorlage**: HTTP-Trigger
+3. Wählen Sie auf der Seite **Übersicht** unten auf der Seite **Funktion erstellen**, um eine neue Funktion mit den folgenden Einstellungen zu erstellen:
+    - **Auswählen einer Vorlage**
+        - **Vorlage**: HTTP-Trigger    
     - **Vorlagendetails**:
-        - **Neue Funktion**: wordcount
+        - **Funktionsname:** wordcount
         - **Autorisierungsstufe:** Funktion
 4. Warten Sie, bis die *wordcount*-Funktion erstellt wird. Wählen Sie dann auf der Seite die Registerkarte **Programmieren und testen** aus.
 5. Ersetzen Sie den Standardfunktionscode durch folgenden Code:
@@ -372,7 +371,7 @@ Nachdem Sie nun über einen Index verfügen, können Sie ihn durchsuchen.
 
     Diese Abfrage ruft die Felder **url** und **top_words** für alle Dokumente ab, in denen *Las Vegas* erwähnt wird.
 
-## Löschen von Übungsressourcen
+## Bereinigung
 
 Nachdem Sie die Übung abgeschlossen haben, löschen Sie alle nicht länger benötigten Ressourcen. Löschen der Azure-Ressourcen:
 

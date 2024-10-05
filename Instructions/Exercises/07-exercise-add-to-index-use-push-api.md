@@ -162,7 +162,7 @@ Sie können das Azure-Portal durchsuchen und dort überprüfen, ob die Dokumente
 
 ![Screenshot: Suchindex mit 100000 Dokumenten.](../media/07-media/check-search-service-index.png)
 
-### Löschen von Übungsressourcen
+### Bereinigung
 
 Nachdem Sie die Übung abgeschlossen haben, löschen Sie alle nicht länger benötigten Ressourcen. Beginnen Sie mit dem Code, der auf Ihrem Computer geklont ist. Löschen Sie dann die Azure-Ressourcen.
 

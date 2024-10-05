@@ -74,3 +74,7 @@ Sie sollten ein Statuscode vom Typ **200** sehen, der anzeigt, dass Ihre Anforde
 1. Wählen Sie die Registerkarte **Textkörper** aus, um die Antwort zu sehen und die Ergebnisse anzuzeigen.
 
 Für eine erfolgreiche Anforderung sollten einen Statuscode vom Typ **200** sehen.
+
+### Bereinigung
+
+Nachdem Sie die Übung abgeschlossen haben, löschen Sie alle nicht länger benötigten Ressourcen. Beginnen Sie mit dem Code, der auf Ihrem Computer geklont ist. Löschen Sie dann die Azure-Ressourcen.
