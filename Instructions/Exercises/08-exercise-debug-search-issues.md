@@ -15,7 +15,7 @@ In dieser Übung erstellen Sie eine Azure KI-Suche-Lösung, importieren einige B
 
 Bevor Sie mit einer Debugsitzung beginnen können, müssen Sie einen Azure Cognitive Search-Dienst erstellen.
 
-1. [Bereitstellen von Ressourcen in Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fazure-search-knowledge-mining%2Fmain%2Fazuredeploy.json) – Wählen Sie diesen Link aus, um alle Ressourcen bereitzustellen, die Sie im Azure-Portal benötigen.
+1. [Bereitstellen von Ressourcen in Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2Fmslearn-knowledge-mining%2Fmain%2FLabfiles%2F08-debug-search%2Fazuredeploy.json) – Wählen Sie diesen Link aus, um alle Ressourcen bereitzustellen, die Sie im Azure-Portal benötigen.
 
     ![Screenshot: ARM-Bereitstellungsvorlage mit eingegebenen Feldern.](../media/08-media/arm-template-deployment.png)
 
