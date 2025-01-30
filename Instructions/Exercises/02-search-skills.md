@@ -157,6 +157,9 @@ Um die Wortzählungsfunktion als benutzerdefinierten Skill zu implementieren, er
     - **Vorlagendetails**:
         - **Funktionsname:** wordcount
         - **Autorisierungsstufe:** Funktion
+
+    > **Hinweis**: Wenn Sie einen Fehler beim Erstellen der Funktion erhalten, aktualisieren Sie bitte die Seite, und die Ressource sollte wie erwartet erstellt worden sein.
+
 4. Warten Sie, bis die *wordcount*-Funktion erstellt wird. Wählen Sie dann auf der Seite die Registerkarte **Programmieren und testen** aus.
 5. Ersetzen Sie den Standardfunktionscode durch folgenden Code:
 

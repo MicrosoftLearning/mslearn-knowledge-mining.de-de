@@ -315,7 +315,7 @@ Obwohl Sie das Portal zum Erstellen und Ändern von Suchlösungen verwenden kön
 
     Alle anderen Metadaten- und Inhaltsfelder im Quelldokument werden implizit gleichnamigen Feldern im Index zugeordnet.
 
-3. Überprüfen Sie den Abschnitt **ouputFieldMappings**, in dem die Ausgaben der Skills im Skillset Indexfeldern zugeordnet werden. Die meisten Zuordnungen entsprechen den Auswahlen, die Sie auf der Benutzeroberfläche vorgenommen haben. Die folgende Zuordnung wurde jedoch hinzugefügt, um den aus dem „sentiment“-Skill extrahierten **sentimentLabel**-Wert dem **sentiment**-Feld zuzuordnen, das zum Index hinzugefügt wurde:
+3. Lesen Sie den Abschnitt **ouputFieldMappings**, in dem die Ausgaben der Skills im Skillset Indexfeldern zugeordnet werden. Die meisten Zuordnungen entsprechen den Auswahlen, die Sie auf der Benutzeroberfläche vorgenommen haben. Die folgende Zuordnung wurde jedoch hinzugefügt, um den aus dem „sentiment“-Skill extrahierten **sentimentLabel**-Wert dem **sentiment**-Feld zuzuordnen, das zum Index hinzugefügt wurde:
 
     ```json
     {
