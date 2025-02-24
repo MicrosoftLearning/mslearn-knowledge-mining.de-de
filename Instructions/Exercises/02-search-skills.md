@@ -146,9 +146,11 @@ Um die Wortzählungsfunktion als benutzerdefinierten Skill zu implementieren, er
     - **Ressourcengruppe**: *Die gleiche Ressourcengruppe wie Ihre Azure KI-Suche-Ressource*
     - **Name der Funktions-App**: *Ein eindeutiger Name*
     - **Laufzeitstapel**: Node.js
-    - **Version:** 18 LTS
+    - **Version**: 20 LTS
     - **Region:** *Die gleiche Region wie Ihre Azure KI-Suche-Ressource*
     - **Betriebssystem:** Windows
+
+>**Hinweis**: Wenn in der Region, in der Sie Ihre Azure KI-Suche-Ressource erstellt haben, kein Kontingent für die Bereitstellung Ihrer Funktions-App-Ressource verfügbar ist, können Sie eine andere Region wählen, in der Ihr Abonnement über ein verfügbares Kontingent für die Bereitstellung verfügt.
 
 2. Warten Sie, bis die Bereitstellung abgeschlossen ist, und wechseln Sie dann zur bereitgestellten Funktions-App-Ressource.
 3. Wählen Sie auf der Seite **Übersicht** unten auf der Seite **Funktion erstellen**, um eine neue Funktion mit den folgenden Einstellungen zu erstellen:
