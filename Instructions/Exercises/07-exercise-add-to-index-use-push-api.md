@@ -27,7 +27,7 @@ Um Zeit zu sparen, wählen Sie diese ARM-Vorlage aus, um Ressourcen zu erstellen
 
     ![Screenshot aller bereitgestellten Azure-Ressourcen.](../media/07-media/azure-resources-created.png)
 
-### Kopieren von REST-API-Informationen für einen Azure KI-Suche-Dienst
+## Kopieren von REST-API-Informationen für einen Azure KI-Suche-Dienst
 
 1. Wählen Sie in der Liste der Ressourcen den von Ihnen erstellten Suchdienst aus. Im obigen Beispiel ist dies **acs118245-search-service**.
 1. Kopieren Sie den Suchdienstnamen in eine Textdatei.
@@ -35,33 +35,18 @@ Um Zeit zu sparen, wählen Sie diese ARM-Vorlage aus, um Ressourcen zu erstellen
     ![Screenshot: Schlüsselabschnitt eines Suchdienstes.](../media/07-media/search-api-keys-exercise-version.png)
 1. Wählen Sie auf der linken Seite **Schlüssel** aus, und kopieren Sie dann den **primären Administratorschlüssel** in dieselbe Textdatei.
 
-### Herunterladen eines Beispielcodes
+## Beispielcode zur Verwendung in Visual Studio Code herunterladen
 
-Öffnen Sie Azure Cloud Shell, indem Sie das Cloud Shell-Symbol im oberen Fensterbereich des Azure-Portals auswählen.
-> **Hinweis** Wenn Sie aufgefordert werden, ein Azure Storage-Konto zu erstellen, wählen Sie **Speicher erstellen** aus.
+Sie führen einen Azure-Beispielcode mit Visual Studio Code aus. Die Code-Dateien wurden in einem GitHub-Repository bereitgestellt.
 
-1. Nachdem der Ladevorgang abgeschlossen ist, klonen Sie das folgende Beispielcode-Repository, indem Sie Folgendes in Ihrer Cloud Shell-Instanz ausführen:
+1. Starten Sie Visual Studio Code.
+1. Öffnen Sie die Palette (UMSCHALT+STRG+P), und führen Sie einen **Git: Clone**-Befehl aus, um das Repository `https://github.com/MicrosoftLearning/mslearn-knowledge-mining` in einen lokalen Ordner zu klonen (der Ordner ist beliebig).
+1. Nachdem das Repository geklont wurde, öffnen Sie den Ordner in Visual Studio Code.
+1. Warten Sie, während zusätzliche Dateien zur Unterstützung der C#-Codeprojekte im Repository installiert werden.
 
-    ```powershell
-    git clone https://github.com/Azure-Samples/azure-search-dotnet-scale.git samples
-    ```
+    > **Hinweis**: Wenn Sie aufgefordert werden, erforderliche Ressourcen zum Erstellen und Debuggen hinzuzufügen, wählen Sie **Not now** (Jetzt nicht) aus.
 
-1. Wechseln Sie in das neu erstellte Verzeichnis, indem Sie Folgendes ausführen:
-
-    ```powershell
-    cd samples
-    ```
-
-1. Führen Sie anschließend Folgendes aus:
-
-    ```powershell
-    code ./optimize-data-indexing/v11
-    ```
-
-1. Dadurch wird der Code-Editor in Cloud Shell im Ordner `/optimize-data-indexing/v11` geöffnet.
-
-    ![Screenshot: Anzeige der Setupbenachrichtigungen in VS Code.](../media/07-media/setup-visual-studio-code-solution.png)
-1. Erweitern Sie im Navigationsmenü auf der linken Seite den Ordner **OptimizeDataIndexing**, und wählen Sie dann die Datei **appsettings.json** aus.
+1. Erweitere in der Navigation links den Ordner **optimize-data-indexing/v11/OptimizeDataIndexing** und wähle dann die Datei **appsettings.json** aus.
 
     ![Screenshot: Inhalt der appsettings.json-Datei.](../media/07-media/update-app-settings.png)
 1. Fügen Sie ihren Suchdienstnamen und den primären Administratorschlüssel ein.
@@ -76,36 +61,29 @@ Um Zeit zu sparen, wählen Sie diese ARM-Vorlage aus, um Ressourcen zu erstellen
 
     Die Datei mit den Einstellungen sollte in etwa wie oben gezeigt aussehen.
 1. Speichern Sie Ihre Änderungen, indem Sie **STRG+S** drücken.
-1. Wählen Sie die Datei **OptimizeDataIndexing.csproj** aus. <!-- Added this and the next two steps in case we can't update the file in the repo that holds these (seems to be separate from the other labs)-->
-1. Ändern Sie in der fünften Zeile `<TargetFramework>netcoreapp3.1</TargetFramework>` in `<TargetFramework>net7.0</TargetFramework>`. <!--- can be removed if no longer needed based on the above-->
-1. Speichern Sie Ihre Änderungen, indem Sie **STRG+S** drücken.<!--- can be removed if no longer needed based on the above-->
-1. Geben Sie im Terminal `cd ./optimize-data-indexing/v11/OptimizeDataIndexing` ein, und drücken Sie dann die **EINGABETASTE**, um in das richtige Verzeichnis zu wechseln.
-1. Wählen Sie die **Program.cs**-Datei aus. Geben Sie dann im Terminal `dotnet run` ein, und drücken Sie die **EINGABETASTE**.
+1. Klicken Sie mit der rechten Maustaste auf den Ordner **OptimizeDataIndexing** und wählen Sie **Im integrierten Terminal öffnen** aus.
+1. Geben Sie im Terminal `dotnet run` ein und drücken Sie die **Eingabetaste**.
 
     ![Screenshot: Ausführung der App in VS Code mit einer Ausnahme.](../media/07-media/debug-application.png)
-Die Ausgabe zeigt, dass in diesem Fall die beste Batchgröße 900 Dokumente umfasst, da sie 3,688 MB pro Sekunde erreicht.
+Die Ausgabe zeigt, dass in diesem Fall die beste Batchgröße 900 Dokumente umfasst, Sie erreicht 6,071 MB pro Sekunde.
 
-### Bearbeiten des Codes zum Implementieren von Threading und einer Backoff- und Wiederholungsstrategie
+## Bearbeiten des Codes zum Implementieren von Threading und einer Backoff- und Wiederholungsstrategie
 
 Code wurde auskommentiert und ist bereit dafür, die App so zu ändern, dass Threads zum Hochladen von Dokumenten in den Suchindex verwendet werden können.
 
 1. Stellen Sie sicher, dass Sie **Program.cs** ausgewählt haben.
 
     ![Screenshot: Anzeige der Program.cs-Datei in VS Code.](../media/07-media/edit-program-code.png)
-1. Kommentieren Sie die Zeilen 38 und 39 wie folgt aus:
+1. Kommentieren Sie die Zeilen 37 und 38 wie folgt aus:
 
     ```csharp
     //Console.WriteLine("{0}", "Finding optimal batch size...\n");
     //await TestBatchSizesAsync(searchClient, numTries: 3);
     ```
 
-1. Heben Sie die Auskommentierung der Zeilen 41 bis 49 auf.
+1. Heben Sie die Auskommentierung der Zeilen 44 bis 48 auf.
 
     ```csharp
-    long numDocuments = 100000;
-    DataGenerator dg = new DataGenerator();
-    List<Hotel> hotels = dg.GetHotels(numDocuments, "large");
-
     Console.WriteLine("{0}", "Uploading using exponential backoff...\n");
     await ExponentialBackoff.IndexDataAsync(searchClient, hotels, 1000, 8);
 
@@ -122,7 +100,6 @@ Code wurde auskommentiert und ist bereit dafür, die App so zu ändern, dass Thr
 1. Wählen Sie Ihr Terminal aus, und drücken Sie dann eine beliebige Taste, um den laufenden Prozess zu beenden, falls noch nicht geschehen.
 1. Führen Sie `dotnet run` im Terminal aus.
 
-    ![Screenshot mit den abgeschlossenen Meldungen in der Konsole.](../media/07-media/upload-hundred-thousand-documents.png)
     Die App startet acht Threads, immer wenn ein Thread das Schreiben einer neuen Nachricht in die Konsole abgeschlossen hat:
 
     ```powershell
@@ -162,7 +139,7 @@ Sie können das Azure-Portal durchsuchen und dort überprüfen, ob die Dokumente
 
 ![Screenshot: Suchindex mit 100000 Dokumenten.](../media/07-media/check-search-service-index.png)
 
-### Bereinigung
+## Bereinigung
 
 Nachdem Sie die Übung abgeschlossen haben, löschen Sie alle nicht länger benötigten Ressourcen. Beginnen Sie mit dem Code, der auf Ihrem Computer geklont ist. Löschen Sie dann die Azure-Ressourcen.
 
