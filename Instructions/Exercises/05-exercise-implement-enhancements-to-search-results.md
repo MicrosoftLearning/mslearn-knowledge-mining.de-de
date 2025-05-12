@@ -83,35 +83,35 @@ Die Azure-Portal geht davon aus, dass das erste Feld im Dokument übersetzt werd
 
 1. Wählen Sie oben auf der Seite den Link für den Suchdienst **advanced-search-service-12345 |Indexes** aus.
 1. Wählen Sie **Skillsets** unter „Suchverwaltung“ im linken Bereich und dann **hotels-sample-skillset** aus.
-1. Bearbeiten Sie das JSON-Dokument, und ändern Sie Zeile 11 in:
+1. Bearbeiten Sie das JSON-Dokument, und ändern Sie Zeile 9 in:
 
     ```json
     "context": "/document/Description",
     ```
 
-1. Ändern Sie die Standardeinstellung der Sprache in „Englisch“ in Zeile 12:
+1. Ändern Sie die Standardeinstellung der Sprache in „Englisch“ in Zeile 11:
 
     ```json
     "defaultFromLanguageCode": "en",
     ```
 
-1. Ändern Sie das Quellfeld in Zeile 18 in:
+1. Ändern Sie das Quellfeld in Zeile 15 in:
 
     ```json
-    "source": "/document/Description"
+    "source": "/document/Description",
     ```
 
-1. Wählen Sie **Speichern** aus.
+1. Wählen Sie **Speichern**.
 1. Wählen Sie oben auf der Seite den Link für den Suchdienst **advanced-search-service-12345 | Skillsets** aus.
 1. Wählen Sie im Bereich **Übersicht** die Option **Indexer** und dann **hotels-sample-indexer** aus.
-1. Klicken Sie auf **Indexerdefinition (JSON)**.
-1. Ändern Sie den Namen des Quellfelds in Zeile 21 in:
+1. Wählen Sie **JSON bearbeiten** aus.
+1. Ändern Sie den Namen des Quellfelds in Zeile 20 in:
 
     ```json
     "sourceFieldName": "/document/Description/Description_pt",
     ```
 
-1. Wählen Sie **Speichern** aus.
+1. Wählen Sie **Speichern**.
 1. Wählen Sie **Zurücksetzen**und dann **Ja** aus.
 1. Wahlen Sie **Ausführen** und dann **Ja** aus.
 
